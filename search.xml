@@ -3,10 +3,13 @@
   <entry>
     <title><![CDATA[道路场景语义分割]]></title>
     <url>%2F2019%2F07%2F11%2F%E9%81%93%E8%B7%AF%E5%9C%BA%E6%99%AF%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2%2F</url>
-    <content type="text"><![CDATA[Datasets CamVid Cityscapes Kitti MethodsReal-time MethodsReference 超棒的整理 VALSE Webinar 20190529-12]]></content>
+    <content type="text"><![CDATA[Datasets CamVid Cityscapes Kitti Method Method mIOU（%） Conference/Publication FCN-8s 65.3 CVPR2015 DeepLab v2 70.4 PAMI2018 FRRN B 71.8 CVPR2017 RefineNet 73.6 CVPR2017 GCN 76.9 CVPR2017 TKCN 79.5 ICME2019 DUC-HDC 80.1 WACV2018 PSANet 80.1 ECCV2018 PSPNet 80.2 CVPR2017 DFN 80.3 CVPR2018 DenseASPP 80.6 CVPR2018 OCNet 81.2 arXiv18 DeepLab v3 81.3 arXiv17 CCNet 81.4 arXiv18 DAN 81.5 CVPR2019 DeepLab v3+ 82.1 ECCV2018 DPC 82.7 NIPS2018 Real-time MethodReference 超棒的整理 VALSE Webinar 20190529-12]]></content>
       <categories>
         <category>试探</category>
       </categories>
+      <tags>
+        <tag>Semantic Segmentation</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[一个测试]]></title>
