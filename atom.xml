@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-07-11T03:39:14.833Z</updated>
+  <updated>2019-07-11T06:10:52.502Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://yoursite.com/2019/07/11/%E9%81%93%E8%B7%AF%E5%9C%BA%E6%99%AF%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/"/>
     <id>http://yoursite.com/2019/07/11/道路场景语义分割/</id>
     <published>2019-07-11T03:35:50.000Z</published>
-    <updated>2019-07-11T03:39:14.833Z</updated>
+    <updated>2019-07-11T06:10:52.502Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="Datasets"><a href="#Datasets" class="headerlink" title="Datasets"></a>Datasets</h3><ul><li><a href="http://mi.eng.cam.ac.uk/research/projects/VideoRec/CamVid/" target="_blank" rel="noopener">CamVid</a></li><li><a href="https://www.cityscapes-dataset.com/" target="_blank" rel="noopener">Cityscapes</a></li><li><a href="http://www.cvlibs.net/datasets/kitti/eval_semantics.php" target="_blank" rel="noopener">Kitti</a></li></ul><h3 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h3><h3 id="Real-time-Methods"><a href="#Real-time-Methods" class="headerlink" title="Real-time Methods"></a>Real-time Methods</h3><h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><ul><li><a href="https://zhangbin0917.github.io/2018/09/18/Semantic-Segmentation/" target="_blank" rel="noopener">超棒的整理</a></li><li><a href="http://valser.org/article-320-1.html" target="_blank" rel="noopener">VALSE Webinar 20190529-12</a></li></ul>]]></content>
     
     <summary type="html">
     
