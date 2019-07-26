@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[速读 - Fully Convolutional Networks for Semantic Segmentation]]></title>
     <url>%2F2019%2F07%2F25%2F%E9%80%9F%E8%AF%BB-Fully-Convolutional-Networks-for-Semantic-Segmentation%2F</url>
-    <content type="text"><![CDATA[资料概览内容]]></content>
+    <content type="text"><![CDATA[资料 Paper Code 概览 Prior Work Contributions 内容 Idea 1: From classiﬁer to dense FCN Idea 2: Skip Architectures Details Loss: per-pixel, unnormalized softmax loss 与 sigmoid crossentropy loss实验效果相同 Augmentation: 随机 mirroring 和 jittering，无明显效果]]></content>
       <categories>
         <category>试探</category>
       </categories>
