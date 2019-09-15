@@ -1,34 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[速读 - DeepLab]]></title>
-    <url>%2F2019%2F08%2F08%2F%E9%80%9F%E8%AF%BB-DeepLab%2F</url>
-    <content type="text"><![CDATA[资料（DeepLab v1-v3+） Paper | Code 概览（DeepLab v2） Keyword: atrous convolution, fully connected CRFs Prior Work: DCNN-based system (1)(2)(3) Contributions: Three challenges and our approach to overcome them 内容（DeepLab v2） Challenge 1: reduced feature resolution → atrous convolution由于原本为图像分类任务设计的DCNN在执行层有重复的max-pooling + downsampling操作，采用FCN方法导致特征图分辨率下降。为了解决这个问题，用atrous convolution代替fully convolution Challenge 2: existence of objects at multiple scales → ASPP第二个挑战源于objects有不同的大小。常规方法是把图像缩放成不同大小输入DCNN后再融合特征图，我们采用的方法则是对一个给定的特征图并行地进行不同rates的astrous convolution，来减小计算量。这种方式取名为astrous spatial pyramid pooling(ASPP) Challenge 3: reduced localization accuracy → fully connected CRFs第三个挑战源于用于分类任务object-centric classifier需要空间变换的不变性，限制了DCNN的空间精度，不利于语义分割任务 内容（DeepLab v3）内容（DeepLab v3+）]]></content>
-      <categories>
-        <category>试探</category>
-      </categories>
-      <tags>
-        <tag>Semantic Segmentation</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[速读 - Fully Convolutional Networks for Semantic Segmentation]]></title>
-    <url>%2F2019%2F07%2F25%2F%E9%80%9F%E8%AF%BB-Fully-Convolutional-Networks-for-Semantic-Segmentation%2F</url>
-    <content type="text"><![CDATA[资料 Paper | Code 概览 Keyword: FCN Prior Work: each pixel is labeled with the class of its enclosing object or region Contributions: the ﬁrst work to train FCNs end-to-end (1) for pixelwise prediction and (2) from supervised pre-training. 内容 Idea 1: From classiﬁer to dense FCN Idea 2: Skip Architectures Details Loss: per-pixel, unnormalized softmax loss 与 sigmoid crossentropy loss 实验效果相同 Augmentation: 随机 mirroring 和 jittering，无明显效果]]></content>
-      <categories>
-        <category>试探</category>
-      </categories>
-      <tags>
-        <tag>Semantic Segmentation</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[道路场景语义分割]]></title>
     <url>%2F2019%2F07%2F11%2F%E9%81%93%E8%B7%AF%E5%9C%BA%E6%99%AF%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2%2F</url>
-    <content type="text"><![CDATA[Datasets CamVid Cityscapes Kitti Method Method mIOU（%） Conference/Publication FCN-8s 65.3 CVPR2015 DeepLab v2 70.4 PAMI2018 FRRN B 71.8 CVPR2017 RefineNet 73.6 CVPR2017 GCN 76.9 CVPR2017 TKCN 79.5 ICME2019 DUC-HDC 80.1 WACV2018 PSANet 80.1 ECCV2018 PSPNet 80.2 CVPR2017 DFN 80.3 CVPR2018 DenseASPP 80.6 CVPR2018 OCNet 81.2 arXiv18 DeepLab v3 81.3 arXiv17 CCNet 81.4 arXiv18 DAN 81.5 CVPR2019 DeepLab v3+ 82.1 ECCV2018 DPC 82.7 NIPS2018 *上表为文献中各方法在Cityscapes上的性能 Real-time Method Method WxH mIOU(%) FPS GFLOPs Param(M) ENet 1920x1080 58.3 21.6 3.83 0.37 SQ 2048x1024 59.8 - - - TwoColumn 1024x512 72.9 14.7 - - CGNet 2048x1024 64.8 17.6 6 0.5 ESPNet - 60.3 4 - 0.4 ERFNet - 68 - - - ICNet 2048x1024 69.5 30.3 - - BiSeNet 1536x768 68.4 105.8 2.9 5.8 1536x768 74.7 65.5 10.8 49 ESNet - 70.7 63 - 1.66 DFANet 1024x1024 71.3 100 3.4 7.8 *上表为文献中各方法在Cityscapes上的性能 Reference 超棒的整理 VALSE Webinar 20190529-12]]></content>
-      <categories>
-        <category>试探</category>
-      </categories>
+    <content type="text"><![CDATA[Datasets Apolloscape Scene Parsing BDD100k CamVid Cityscapes Daimler Urban Segmentation Kitti Mapillary Vistas Method Method mIOU（%） Conference/Publication FCN-8s 65.3 CVPR2015 DeepLab v2 70.4 PAMI2018 FRRN B 71.8 CVPR2017 RefineNet 73.6 CVPR2017 GCN 76.9 CVPR2017 TKCN 79.5 ICME2019 DUC-HDC 80.1 WACV2018 PSANet 80.1 ECCV2018 PSPNet 80.2 CVPR2017 DFN 80.3 CVPR2018 DenseASPP 80.6 CVPR2018 OCNet 81.2 arXiv18 DeepLab v3 81.3 arXiv17 CCNet 81.4 arXiv18 DAN 81.5 CVPR2019 DeepLab v3+ 82.1 ECCV2018 DPC 82.7 NIPS2018 *上表为文献中各方法在Cityscapes上的性能 Real-time Method Method WxH mIOU(%) FPS GFLOPs Param(M) ENet 1920x1080 58.3 21.6 3.83 0.37 SQ 2048x1024 59.8 - - - TwoColumn 1024x512 72.9 14.7 - - CGNet 2048x1024 64.8 17.6 6 0.5 ESPNet - 60.3 4 - 0.4 ERFNet - 68 - - - ICNet 2048x1024 69.5 30.3 - - BiSeNet 1536x768 68.4 105.8 2.9 5.8 1536x768 74.7 65.5 10.8 49 ESNet - 70.7 63 - 1.66 DFANet 1024x1024 71.3 100 3.4 7.8 *上表为文献中各方法在Cityscapes上的性能 Reference 超棒的整理 VALSE Webinar 20190529-12]]></content>
       <tags>
         <tag>Semantic Segmentation</tag>
       </tags>

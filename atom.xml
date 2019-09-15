@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-08-09T14:05:29.493Z</updated>
+  <updated>2019-09-15T13:18:40.335Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,63 +17,13 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>速读 - DeepLab</title>
-    <link href="http://yoursite.com/2019/08/08/%E9%80%9F%E8%AF%BB-DeepLab/"/>
-    <id>http://yoursite.com/2019/08/08/速读-DeepLab/</id>
-    <published>2019-08-08T03:11:16.000Z</published>
-    <updated>2019-08-09T14:05:29.493Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h5 id="资料（DeepLab-v1-v3-）"><a href="#资料（DeepLab-v1-v3-）" class="headerlink" title="资料（DeepLab v1-v3+）"></a>资料（DeepLab v1-v3+）</h5><ul><li>Paper | <a href="https://github.com/tensorflow/models/tree/master/research/deeplab" target="_blank" rel="noopener">Code</a></li></ul><h5 id="概览（DeepLab-v2）"><a href="#概览（DeepLab-v2）" class="headerlink" title="概览（DeepLab v2）"></a>概览（DeepLab v2）</h5><ul><li><strong>Keyword:</strong> atrous convolution, fully connected CRFs</li><li><strong>Prior Work:</strong> DCNN-based system (1)(2)(3)</li><li><strong>Contributions:</strong> Three challenges and our approach to overcome them</li></ul><h5 id="内容（DeepLab-v2）"><a href="#内容（DeepLab-v2）" class="headerlink" title="内容（DeepLab v2）"></a>内容（DeepLab v2）</h5><ul><li><p><strong>Challenge 1: reduced feature resolution → atrous convolution</strong><br>由于原本为图像分类任务设计的DCNN在执行层有重复的max-pooling + downsampling操作，采用FCN方法导致特征图分辨率下降。为了解决这个问题，用atrous convolution代替fully convolution</p></li><li><p><strong>Challenge 2: existence of objects at multiple scales → ASPP</strong><br>第二个挑战源于objects有不同的大小。常规方法是把图像缩放成不同大小输入DCNN后再融合特征图，我们采用的方法则是对一个给定的特征图并行地进行不同rates的astrous convolution，来减小计算量。这种方式取名为astrous spatial pyramid pooling(ASPP)</p></li><li><p><strong>Challenge 3: reduced localization accuracy → fully connected CRFs</strong><br>第三个挑战源于用于分类任务object-centric classifier需要空间变换的不变性，限制了DCNN的空间精度，不利于语义分割任务</p></li></ul><h5 id="内容（DeepLab-v3）"><a href="#内容（DeepLab-v3）" class="headerlink" title="内容（DeepLab v3）"></a>内容（DeepLab v3）</h5><h5 id="内容（DeepLab-v3-）"><a href="#内容（DeepLab-v3-）" class="headerlink" title="内容（DeepLab v3+）"></a>内容（DeepLab v3+）</h5>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla
-      
-    
-    </summary>
-    
-      <category term="试探" scheme="http://yoursite.com/categories/%E8%AF%95%E6%8E%A2/"/>
-    
-    
-      <category term="Semantic Segmentation" scheme="http://yoursite.com/tags/Semantic-Segmentation/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>速读 - Fully Convolutional Networks for Semantic Segmentation</title>
-    <link href="http://yoursite.com/2019/07/25/%E9%80%9F%E8%AF%BB-Fully-Convolutional-Networks-for-Semantic-Segmentation/"/>
-    <id>http://yoursite.com/2019/07/25/速读-Fully-Convolutional-Networks-for-Semantic-Segmentation/</id>
-    <published>2019-07-25T06:21:22.000Z</published>
-    <updated>2019-08-09T11:13:20.580Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h5 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h5><ul><li>Paper | <a href="https://github.com/shelhamer/fcn.berkeleyvision.org" target="_blank" rel="noopener">Code</a></li></ul><h5 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h5><ul><li><strong>Keyword:</strong> FCN</li><li><strong>Prior Work:</strong> each pixel is labeled with the class of its enclosing object or region</li><li><strong>Contributions:</strong> the ﬁrst work to train FCNs end-to-end (1) for pixelwise prediction and (2) from supervised pre-training.</li></ul><h5 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h5><ul><li><strong>Idea 1: From classiﬁer to dense FCN</strong></li><li><strong>Idea 2: Skip Architectures</strong></li><li><strong>Details</strong><ul><li><strong>Loss:</strong> per-pixel, unnormalized softmax loss 与 sigmoid crossentropy loss 实验效果相同</li><li><strong>Augmentation:</strong> 随机 mirroring 和 jittering，无明显效果</li></ul></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla
-      
-    
-    </summary>
-    
-      <category term="试探" scheme="http://yoursite.com/categories/%E8%AF%95%E6%8E%A2/"/>
-    
-    
-      <category term="Semantic Segmentation" scheme="http://yoursite.com/tags/Semantic-Segmentation/"/>
-    
-  </entry>
-  
-  <entry>
     <title>道路场景语义分割</title>
     <link href="http://yoursite.com/2019/07/11/%E9%81%93%E8%B7%AF%E5%9C%BA%E6%99%AF%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/"/>
     <id>http://yoursite.com/2019/07/11/道路场景语义分割/</id>
     <published>2019-07-11T03:35:50.000Z</published>
-    <updated>2019-07-30T06:18:15.129Z</updated>
+    <updated>2019-09-15T13:18:40.335Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="Datasets"><a href="#Datasets" class="headerlink" title="Datasets"></a>Datasets</h4><ul><li><a href="http://mi.eng.cam.ac.uk/research/projects/VideoRec/CamVid/" target="_blank" rel="noopener">CamVid</a></li><li><a href="https://www.cityscapes-dataset.com/" target="_blank" rel="noopener">Cityscapes</a></li><li><a href="http://www.cvlibs.net/datasets/kitti/eval_semantics.php" target="_blank" rel="noopener">Kitti</a></li></ul><h4 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h4><table><thead><tr><th>Method</th><th>mIOU（%）</th><th>Conference/Publication</th></tr></thead><tbody><tr><td><a href="http://sibylk.site/2019/07/25/%E9%80%9F%E8%AF%BB-Fully-Convolutional-Networks-for-Semantic-Segmentation/" target="_blank" rel="noopener">FCN-8s</a></td><td>65.3</td><td>CVPR2015</td></tr><tr><td>DeepLab v2</td><td>70.4</td><td>PAMI2018</td></tr><tr><td>FRRN B</td><td>71.8</td><td>CVPR2017</td></tr><tr><td>RefineNet</td><td>73.6</td><td>CVPR2017</td></tr><tr><td>GCN</td><td>76.9</td><td>CVPR2017</td></tr><tr><td>TKCN</td><td>79.5</td><td>ICME2019</td></tr><tr><td>DUC-HDC</td><td>80.1</td><td>WACV2018</td></tr><tr><td>PSANet</td><td>80.1</td><td>ECCV2018</td></tr><tr><td>PSPNet</td><td>80.2</td><td>CVPR2017</td></tr><tr><td>DFN</td><td>80.3</td><td>CVPR2018</td></tr><tr><td>DenseASPP</td><td>80.6</td><td>CVPR2018</td></tr><tr><td>OCNet</td><td>81.2</td><td>arXiv18</td></tr><tr><td>DeepLab v3</td><td>81.3</td><td>arXiv17</td></tr><tr><td>CCNet</td><td>81.4</td><td>arXiv18</td></tr><tr><td>DAN</td><td>81.5</td><td>CVPR2019</td></tr><tr><td>DeepLab v3+</td><td>82.1</td><td>ECCV2018</td></tr><tr><td>DPC</td><td>82.7</td><td>NIPS2018</td></tr></tbody></table><p>*上表为文献中各方法在Cityscapes上的性能</p><h4 id="Real-time-Method"><a href="#Real-time-Method" class="headerlink" title="Real-time Method"></a>Real-time Method</h4><table><thead><tr><th>Method</th><th>WxH</th><th>mIOU(%)</th><th>FPS</th><th>GFLOPs</th><th>Param(M)</th></tr></thead><tbody><tr><td>ENet</td><td>1920x1080</td><td>58.3</td><td>21.6</td><td>3.83</td><td>0.37</td></tr><tr><td>SQ</td><td>2048x1024</td><td>59.8</td><td>-</td><td>-</td><td>-</td></tr><tr><td>TwoColumn</td><td>1024x512</td><td>72.9</td><td>14.7</td><td>-</td><td>-</td></tr><tr><td>CGNet</td><td>2048x1024</td><td>64.8</td><td>17.6</td><td>6</td><td>0.5</td></tr><tr><td>ESPNet</td><td>-</td><td>60.3</td><td>4</td><td>-</td><td>0.4</td></tr><tr><td>ERFNet</td><td>-</td><td>68</td><td>-</td><td>-</td><td>-</td></tr><tr><td>ICNet</td><td>2048x1024</td><td>69.5</td><td>30.3</td><td>-</td><td>-</td></tr><tr><td>BiSeNet</td><td>1536x768</td><td>68.4</td><td>105.8</td><td>2.9</td><td>5.8</td></tr><tr><td></td><td>1536x768</td><td>74.7</td><td>65.5</td><td>10.8</td><td>49</td></tr><tr><td>ESNet</td><td>-</td><td>70.7</td><td>63</td><td>-</td><td>1.66</td></tr><tr><td>DFANet</td><td>1024x1024</td><td>71.3</td><td>100</td><td>3.4</td><td>7.8</td></tr></tbody></table><p>*上表为文献中各方法在Cityscapes上的性能</p><h4 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h4><ul><li><a href="https://zhangbin0917.github.io/2018/09/18/Semantic-Segmentation/" target="_blank" rel="noopener">超棒的整理</a></li><li><a href="http://valser.org/article-320-1.html" target="_blank" rel="noopener">VALSE Webinar 20190529-12</a></li></ul>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="Datasets"><a href="#Datasets" class="headerlink" title="Datasets"></a>Datasets</h4><ul><li><a href="http://apolloscape.auto/scene.html" target="_blank" rel="noopener">Apolloscape Scene Parsing</a></li><li><a href="https://bair.berkeley.edu/blog/2018/05/30/bdd/" target="_blank" rel="noopener">BDD100k</a></li><li><a href="http://mi.eng.cam.ac.uk/research/projects/VideoRec/CamVid/" target="_blank" rel="noopener">CamVid</a></li><li><a href="https://www.cityscapes-dataset.com/" target="_blank" rel="noopener">Cityscapes</a></li><li><a href="http://www.6d-vision.com/scene-labeling" target="_blank" rel="noopener">Daimler Urban Segmentation</a></li><li><a href="http://www.cvlibs.net/datasets/kitti/eval_semantics.php" target="_blank" rel="noopener">Kitti</a></li><li><a href="https://www.mapillary.com/dataset/" target="_blank" rel="noopener">Mapillary Vistas</a></li></ul><h4 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h4><table><thead><tr><th>Method</th><th>mIOU（%）</th><th>Conference/Publication</th></tr></thead><tbody><tr><td><a href="http://sibylk.site/2019/07/25/%E9%80%9F%E8%AF%BB-Fully-Convolutional-Networks-for-Semantic-Segmentation/" target="_blank" rel="noopener">FCN-8s</a></td><td>65.3</td><td>CVPR2015</td></tr><tr><td>DeepLab v2</td><td>70.4</td><td>PAMI2018</td></tr><tr><td>FRRN B</td><td>71.8</td><td>CVPR2017</td></tr><tr><td>RefineNet</td><td>73.6</td><td>CVPR2017</td></tr><tr><td>GCN</td><td>76.9</td><td>CVPR2017</td></tr><tr><td>TKCN</td><td>79.5</td><td>ICME2019</td></tr><tr><td>DUC-HDC</td><td>80.1</td><td>WACV2018</td></tr><tr><td>PSANet</td><td>80.1</td><td>ECCV2018</td></tr><tr><td>PSPNet</td><td>80.2</td><td>CVPR2017</td></tr><tr><td>DFN</td><td>80.3</td><td>CVPR2018</td></tr><tr><td>DenseASPP</td><td>80.6</td><td>CVPR2018</td></tr><tr><td>OCNet</td><td>81.2</td><td>arXiv18</td></tr><tr><td>DeepLab v3</td><td>81.3</td><td>arXiv17</td></tr><tr><td>CCNet</td><td>81.4</td><td>arXiv18</td></tr><tr><td>DAN</td><td>81.5</td><td>CVPR2019</td></tr><tr><td>DeepLab v3+</td><td>82.1</td><td>ECCV2018</td></tr><tr><td>DPC</td><td>82.7</td><td>NIPS2018</td></tr></tbody></table><p>*上表为文献中各方法在Cityscapes上的性能</p><h4 id="Real-time-Method"><a href="#Real-time-Method" class="headerlink" title="Real-time Method"></a>Real-time Method</h4><table><thead><tr><th>Method</th><th>WxH</th><th>mIOU(%)</th><th>FPS</th><th>GFLOPs</th><th>Param(M)</th></tr></thead><tbody><tr><td>ENet</td><td>1920x1080</td><td>58.3</td><td>21.6</td><td>3.83</td><td>0.37</td></tr><tr><td>SQ</td><td>2048x1024</td><td>59.8</td><td>-</td><td>-</td><td>-</td></tr><tr><td>TwoColumn</td><td>1024x512</td><td>72.9</td><td>14.7</td><td>-</td><td>-</td></tr><tr><td>CGNet</td><td>2048x1024</td><td>64.8</td><td>17.6</td><td>6</td><td>0.5</td></tr><tr><td>ESPNet</td><td>-</td><td>60.3</td><td>4</td><td>-</td><td>0.4</td></tr><tr><td>ERFNet</td><td>-</td><td>68</td><td>-</td><td>-</td><td>-</td></tr><tr><td>ICNet</td><td>2048x1024</td><td>69.5</td><td>30.3</td><td>-</td><td>-</td></tr><tr><td>BiSeNet</td><td>1536x768</td><td>68.4</td><td>105.8</td><td>2.9</td><td>5.8</td></tr><tr><td></td><td>1536x768</td><td>74.7</td><td>65.5</td><td>10.8</td><td>49</td></tr><tr><td>ESNet</td><td>-</td><td>70.7</td><td>63</td><td>-</td><td>1.66</td></tr><tr><td>DFANet</td><td>1024x1024</td><td>71.3</td><td>100</td><td>3.4</td><td>7.8</td></tr></tbody></table><p>*上表为文献中各方法在Cityscapes上的性能</p><h4 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h4><ul><li><a href="https://zhangbin0917.github.io/2018/09/18/Semantic-Segmentation/" target="_blank" rel="noopener">超棒的整理</a></li><li><a href="http://valser.org/article-320-1.html" target="_blank" rel="noopener">VALSE Webinar 20190529-12</a></li></ul>]]></content>
     
     <summary type="html">
     
@@ -83,8 +33,6 @@
       
     
     </summary>
-    
-      <category term="试探" scheme="http://yoursite.com/categories/%E8%AF%95%E6%8E%A2/"/>
     
     
       <category term="Semantic Segmentation" scheme="http://yoursite.com/tags/Semantic-Segmentation/"/>

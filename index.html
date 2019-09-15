@@ -275,321 +275,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/08/速读-DeepLab/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Sibyl K">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Memo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/08/08/速读-DeepLab/" itemprop="url">速读 - DeepLab</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-08T11:11:16+08:00">
-                2019-08-08
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/试探/" itemprop="url" rel="index">
-                    <span itemprop="name">试探</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h5 id="资料（DeepLab-v1-v3-）"><a href="#资料（DeepLab-v1-v3-）" class="headerlink" title="资料（DeepLab v1-v3+）"></a>资料（DeepLab v1-v3+）</h5><ul>
-<li>Paper | <a href="https://github.com/tensorflow/models/tree/master/research/deeplab" target="_blank" rel="noopener">Code</a></li>
-</ul>
-<h5 id="概览（DeepLab-v2）"><a href="#概览（DeepLab-v2）" class="headerlink" title="概览（DeepLab v2）"></a>概览（DeepLab v2）</h5><ul>
-<li><strong>Keyword:</strong> atrous convolution, fully connected CRFs</li>
-<li><strong>Prior Work:</strong> DCNN-based system (1)(2)(3)</li>
-<li><strong>Contributions:</strong> Three challenges and our approach to overcome them</li>
-</ul>
-<h5 id="内容（DeepLab-v2）"><a href="#内容（DeepLab-v2）" class="headerlink" title="内容（DeepLab v2）"></a>内容（DeepLab v2）</h5><ul>
-<li><p><strong>Challenge 1: reduced feature resolution → atrous convolution</strong><br>由于原本为图像分类任务设计的DCNN在执行层有重复的max-pooling + downsampling操作，采用FCN方法导致特征图分辨率下降。为了解决这个问题，用atrous convolution代替fully convolution</p>
-</li>
-<li><p><strong>Challenge 2: existence of objects at multiple scales → ASPP</strong><br>第二个挑战源于objects有不同的大小。常规方法是把图像缩放成不同大小输入DCNN后再融合特征图，我们采用的方法则是对一个给定的特征图并行地进行不同rates的astrous convolution，来减小计算量。这种方式取名为astrous spatial pyramid pooling(ASPP)</p>
-</li>
-<li><p><strong>Challenge 3: reduced localization accuracy → fully connected CRFs</strong><br>第三个挑战源于用于分类任务object-centric classifier需要空间变换的不变性，限制了DCNN的空间精度，不利于语义分割任务</p>
-</li>
-</ul>
-<h5 id="内容（DeepLab-v3）"><a href="#内容（DeepLab-v3）" class="headerlink" title="内容（DeepLab v3）"></a>内容（DeepLab v3）</h5><h5 id="内容（DeepLab-v3-）"><a href="#内容（DeepLab-v3-）" class="headerlink" title="内容（DeepLab v3+）"></a>内容（DeepLab v3+）</h5>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/25/速读-Fully-Convolutional-Networks-for-Semantic-Segmentation/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Sibyl K">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Memo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/07/25/速读-Fully-Convolutional-Networks-for-Semantic-Segmentation/" itemprop="url">速读 - Fully Convolutional Networks for Semantic Segmentation</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-25T14:21:22+08:00">
-                2019-07-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/试探/" itemprop="url" rel="index">
-                    <span itemprop="name">试探</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h5 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h5><ul>
-<li>Paper | <a href="https://github.com/shelhamer/fcn.berkeleyvision.org" target="_blank" rel="noopener">Code</a></li>
-</ul>
-<h5 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h5><ul>
-<li><strong>Keyword:</strong> FCN</li>
-<li><strong>Prior Work:</strong> each pixel is labeled with the class of its enclosing object or region</li>
-<li><strong>Contributions:</strong> the ﬁrst work to train FCNs end-to-end (1) for pixelwise prediction and (2) from supervised pre-training.</li>
-</ul>
-<h5 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h5><ul>
-<li><strong>Idea 1: From classiﬁer to dense FCN</strong></li>
-<li><strong>Idea 2: Skip Architectures</strong></li>
-<li><strong>Details</strong><ul>
-<li><strong>Loss:</strong> per-pixel, unnormalized softmax loss 与 sigmoid crossentropy loss 实验效果相同</li>
-<li><strong>Augmentation:</strong> 随机 mirroring 和 jittering，无明显效果</li>
-</ul>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/11/道路场景语义分割/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -632,28 +317,6 @@
           </span>
 
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/试探/" itemprop="url" rel="index">
-                    <span itemprop="name">试探</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
 
           
             
@@ -684,9 +347,13 @@
         
           
             <h4 id="Datasets"><a href="#Datasets" class="headerlink" title="Datasets"></a>Datasets</h4><ul>
+<li><a href="http://apolloscape.auto/scene.html" target="_blank" rel="noopener">Apolloscape Scene Parsing</a></li>
+<li><a href="https://bair.berkeley.edu/blog/2018/05/30/bdd/" target="_blank" rel="noopener">BDD100k</a></li>
 <li><a href="http://mi.eng.cam.ac.uk/research/projects/VideoRec/CamVid/" target="_blank" rel="noopener">CamVid</a></li>
 <li><a href="https://www.cityscapes-dataset.com/" target="_blank" rel="noopener">Cityscapes</a></li>
+<li><a href="http://www.6d-vision.com/scene-labeling" target="_blank" rel="noopener">Daimler Urban Segmentation</a></li>
 <li><a href="http://www.cvlibs.net/datasets/kitti/eval_semantics.php" target="_blank" rel="noopener">Kitti</a></li>
+<li><a href="https://www.mapillary.com/dataset/" target="_blank" rel="noopener">Mapillary Vistas</a></li>
 </ul>
 <h4 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h4><table>
 <thead>
@@ -1119,7 +786,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1130,7 +797,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
