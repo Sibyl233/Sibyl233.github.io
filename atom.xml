@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-23T08:01:14.874Z</updated>
+  <updated>2020-01-08T08:39:21.680Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Zotero使用简明指南</title>
+    <link href="http://yoursite.com/2020/01/08/%E2%80%9CZotero%E4%BD%BF%E7%94%A8%E7%AE%80%E6%98%8E%E6%8C%87%E5%8D%97%E2%80%9D/"/>
+    <id>http://yoursite.com/2020/01/08/“Zotero使用简明指南”/</id>
+    <published>2020-01-08T08:22:23.000Z</published>
+    <updated>2020-01-08T08:39:21.680Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="下载与基本设置"><a href="#下载与基本设置" class="headerlink" title="下载与基本设置"></a>下载与基本设置</h4><h5 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h5><p><a href="https://www.zotero.org/download/" target="_blank" rel="noopener">官网下载</a>：Zotero 和 Zotero Connector</p><h5 id="设置同步"><a href="#设置同步" class="headerlink" title="设置同步"></a>设置同步</h5><p>Zotero本身是自带同步功能的，但是自带的空间有限，可以使用webdav连接到其他网盘，以坚果云为例：<a href="http://help.jianguoyun.com/?p=3168" target="_blank" rel="noopener">如何在Zotero中设置webdav连接到坚果云？</a></p><h5 id="设置Zotfile"><a href="#设置Zotfile" class="headerlink" title="设置Zotfile"></a>设置Zotfile</h5><p>Zotfile是一款插件，配合Zotero可以更好地管理文献附件：<a href="http://zotfile.com/#how-to-install--set-up-zotfile" target="_blank" rel="noopener">下载和设置</a></p><h4 id="其它功能"><a href="#其它功能" class="headerlink" title="其它功能"></a>其它功能</h4><h5 id="导出文献列表（Word-Latex）"><a href="#导出文献列表（Word-Latex）" class="headerlink" title="导出文献列表（Word/Latex）"></a>导出文献列表（Word/Latex）</h5><h5 id="Papership（ipad-iphone端阅读）"><a href="#Papership（ipad-iphone端阅读）" class="headerlink" title="Papership（ipad/iphone端阅读）"></a>Papership（ipad/iphone端阅读）</h5>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>语义分割方法整理</title>
