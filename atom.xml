@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-01-09T03:03:35.432Z</updated>
+  <updated>2020-01-09T03:18:36.836Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://yoursite.com/2020/01/08/Zotero%E4%BD%BF%E7%94%A8%E7%AE%80%E6%98%8E%E6%8C%87%E5%8D%97/"/>
     <id>http://yoursite.com/2020/01/08/Zotero使用简明指南/</id>
     <published>2020-01-08T08:22:23.000Z</published>
-    <updated>2020-01-09T03:03:35.432Z</updated>
+    <updated>2020-01-09T03:18:36.836Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="下载与基本设置"><a href="#下载与基本设置" class="headerlink" title="下载与基本设置"></a>下载与基本设置</h4><h5 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h5><p><a href="https://www.zotero.org/download/" target="_blank" rel="noopener">官网下载</a>Zotero和Zotero Connector。前者是本体，后者是用于抓取条目和相关附件的浏览器插件。</p><h5 id="设置同步"><a href="#设置同步" class="headerlink" title="设置同步"></a>设置同步</h5><p>Zotero本身是自带同步功能的，但是自带的空间有限，可以使用webdav连接到其他网盘，以坚果云为例：<a href="http://help.jianguoyun.com/?p=3168" target="_blank" rel="noopener">如何在Zotero中设置webdav连接到坚果云？</a></p><h5 id="设置Zotfile"><a href="#设置Zotfile" class="headerlink" title="设置Zotfile"></a>设置Zotfile</h5><p>Zotfile是一款插件，配合Zotero可以更好地管理文献附件：<a href="http://zotfile.com/#how-to-install--set-up-zotfile" target="_blank" rel="noopener">下载和设置</a></p><h4 id="其它功能"><a href="#其它功能" class="headerlink" title="其它功能"></a>其它功能</h4><h5 id="导出文献列表（Word-Latex）"><a href="#导出文献列表（Word-Latex）" class="headerlink" title="导出文献列表（Word/Latex）"></a>导出文献列表（Word/Latex）</h5><p>暂时不用</p><h5 id="Papership（ipad-iphone端阅读）"><a href="#Papership（ipad-iphone端阅读）" class="headerlink" title="Papership（ipad/iphone端阅读）"></a>Papership（ipad/iphone端阅读）</h5><p>在Papership应用中，用Zotero账户登录并设置Zotero File Hosting（与1.2设置同步类似）。</p><p><img src="/2020/01/08/Zotero使用简明指南/361578538654_.pic_hd.jpg" alt=""></p><p><img src="/2020/01/08/Zotero使用简明指南/371578538743_.pic_hd.jpg" alt=""></p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="下载与基本设置"><a href="#下载与基本设置" class="headerlink" title="下载与基本设置"></a>下载与基本设置</h4><h5 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h5><p><a href="https://www.zotero.org/download/" target="_blank" rel="noopener">官网下载</a>Zotero和Zotero Connector。前者是本体，后者是用于抓取条目和相关附件的浏览器插件。</p><h5 id="设置同步"><a href="#设置同步" class="headerlink" title="设置同步"></a>设置同步</h5><p>Zotero本身是自带同步功能的，但是自带的空间有限，可以使用webdav连接到其他网盘，以坚果云为例：<a href="http://help.jianguoyun.com/?p=3168" target="_blank" rel="noopener">如何在Zotero中设置webdav连接到坚果云？</a></p><h5 id="设置Zotfile"><a href="#设置Zotfile" class="headerlink" title="设置Zotfile"></a>设置Zotfile</h5><p>Zotfile是一款插件，配合Zotero可以更好地管理文献附件：<a href="http://zotfile.com/#how-to-install--set-up-zotfile" target="_blank" rel="noopener">下载和设置</a></p><h4 id="其它功能"><a href="#其它功能" class="headerlink" title="其它功能"></a>其它功能</h4><h5 id="导出文献列表（Word-Latex）"><a href="#导出文献列表（Word-Latex）" class="headerlink" title="导出文献列表（Word/Latex）"></a>导出文献列表（Word/Latex）</h5><p>……待补充……</p><h5 id="Papership（ipad-iphone端）"><a href="#Papership（ipad-iphone端）" class="headerlink" title="Papership（ipad/iphone端）"></a>Papership（ipad/iphone端）</h5><p>用Zotero账户登录Papership应用，并设置Zotero File Hosting（与步骤1.2设置同步类似）。</p>]]></content>
     
     <summary type="html">
     

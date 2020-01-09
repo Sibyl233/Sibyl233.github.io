@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Zotero使用简明指南]]></title>
     <url>%2F2020%2F01%2F08%2FZotero%E4%BD%BF%E7%94%A8%E7%AE%80%E6%98%8E%E6%8C%87%E5%8D%97%2F</url>
-    <content type="text"><![CDATA[下载与基本设置下载官网下载Zotero和Zotero Connector。前者是本体，后者是用于抓取条目和相关附件的浏览器插件。 设置同步Zotero本身是自带同步功能的，但是自带的空间有限，可以使用webdav连接到其他网盘，以坚果云为例：如何在Zotero中设置webdav连接到坚果云？ 设置ZotfileZotfile是一款插件，配合Zotero可以更好地管理文献附件：下载和设置 其它功能导出文献列表（Word/Latex）暂时不用 Papership（ipad/iphone端阅读）在Papership应用中，用Zotero账户登录并设置Zotero File Hosting（与1.2设置同步类似）。]]></content>
+    <content type="text"><![CDATA[下载与基本设置下载官网下载Zotero和Zotero Connector。前者是本体，后者是用于抓取条目和相关附件的浏览器插件。 设置同步Zotero本身是自带同步功能的，但是自带的空间有限，可以使用webdav连接到其他网盘，以坚果云为例：如何在Zotero中设置webdav连接到坚果云？ 设置ZotfileZotfile是一款插件，配合Zotero可以更好地管理文献附件：下载和设置 其它功能导出文献列表（Word/Latex）……待补充…… Papership（ipad/iphone端）用Zotero账户登录Papership应用，并设置Zotero File Hosting（与步骤1.2设置同步类似）。]]></content>
   </entry>
   <entry>
     <title><![CDATA[语义分割方法整理]]></title>
