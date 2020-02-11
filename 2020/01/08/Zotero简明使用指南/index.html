@@ -1,214 +1,366 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
+
+
+
+
+
 <head><meta name="generator" content="Hexo 3.9.0">
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon-k.png">
+  <link rel="icon" type="image/png" href="/img/favicon-32x32-k.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
   
+  <meta name="description" content="">
+  <meta name="author" content="Sibyl">
+  <meta name="keywords" content="">
+  <title>Zotero简明使用指南 ~ 备忘</title>
 
-  
-  <title>Zotero简明使用指南 | Memo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="下载与基本设置下载官网下载Zotero和Zotero Connector。前者是管理文献的本体；后者是用于抓取条目和相关附件的浏览器插件。 设置同步Zotero本身自带同步功能，但是自带空间有限，故可以使用webdav连接到其他网盘，以坚果云为例：如何在Zotero中设置webdav连接到坚果云？ 设置ZotfileZotfile是一款插件，配合Zotero使用可以更好地管理（批量命名和移除等）文">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Zotero简明使用指南">
-<meta property="og:url" content="http://sibyl233.github.io/2020/01/08/Zotero简明使用指南/index.html">
-<meta property="og:site_name" content="Memo">
-<meta property="og:description" content="下载与基本设置下载官网下载Zotero和Zotero Connector。前者是管理文献的本体；后者是用于抓取条目和相关附件的浏览器插件。 设置同步Zotero本身自带同步功能，但是自带空间有限，故可以使用webdav连接到其他网盘，以坚果云为例：如何在Zotero中设置webdav连接到坚果云？ 设置ZotfileZotfile是一款插件，配合Zotero使用可以更好地管理（批量命名和移除等）文">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-02-11T07:11:42.694Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Zotero简明使用指南">
-<meta name="twitter:description" content="下载与基本设置下载官网下载Zotero和Zotero Connector。前者是管理文献的本体；后者是用于抓取条目和相关附件的浏览器插件。 设置同步Zotero本身自带同步功能，但是自带空间有限，故可以使用webdav连接到其他网盘，以坚果云为例：如何在Zotero中设置webdav连接到坚果云？ 设置ZotfileZotfile是一款插件，配合Zotero使用可以更好地管理（批量命名和移除等）文">
-  
-    <link rel="alternate" href="/atom.xml" title="Memo" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="/lib/mdbootstrap/css/mdb.min.css">
+<link rel="stylesheet" href="/lib/github-markdown/github-markdown.min.css">
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1067060_qzomjdt8bmp.css">
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+  <link rel="stylesheet" href="/lib/fancybox/jquery.fancybox.min.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
 </head>
-</html>
+
+
 <body>
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Memo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><header style="height: 40vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>备忘</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
         
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://sibyl233.github.io"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main"><article id="post-Zotero简明使用指南" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/01/08/Zotero简明使用指南/" class="article-date">
-  <time datetime="2020-01-08T08:22:23.000Z" itemprop="datePublished">2020-01-08</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/指南/">指南</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      Zotero简明使用指南
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="下载与基本设置"><a href="#下载与基本设置" class="headerlink" title="下载与基本设置"></a>下载与基本设置</h4><h5 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h5><p><a href="https://www.zotero.org/download/" target="_blank" rel="noopener">官网下载</a>Zotero和Zotero Connector。前者是管理文献的本体；后者是用于抓取条目和相关附件的浏览器插件。</p>
-<h5 id="设置同步"><a href="#设置同步" class="headerlink" title="设置同步"></a>设置同步</h5><p>Zotero本身自带同步功能，但是自带空间有限，故可以使用webdav连接到其他网盘，以坚果云为例：<a href="http://help.jianguoyun.com/?p=3168" target="_blank" rel="noopener">如何在Zotero中设置webdav连接到坚果云？</a></p>
-<h5 id="设置Zotfile"><a href="#设置Zotfile" class="headerlink" title="设置Zotfile"></a>设置Zotfile</h5><p>Zotfile是一款插件，配合Zotero使用可以更好地管理（批量命名和移除等）文献附件：<a href="http://zotfile.com/#how-to-install--set-up-zotfile" target="_blank" rel="noopener">下载和设置</a>。</p>
-<a id="more"></a>
-<h4 id="其它功能"><a href="#其它功能" class="headerlink" title="其它功能"></a>其它功能</h4><h5 id="导出参考文献（Word-Latex）"><a href="#导出参考文献（Word-Latex）" class="headerlink" title="导出参考文献（Word/Latex）"></a>导出参考文献（Word/Latex）</h5><p>若<a href="https://www.zotero.org/support/creating_bibliographies" target="_blank" rel="noopener">不使用插件</a>，❶直接拖拽条目至文本编辑器/使用快捷键即可实现单条目的快速复制；❷在Zotero中选取所需条目，右键选择<code>由所选条目创建引文目录</code>即可实现多条目的快速复制。<br>若<a href="https://www.zotero.org/support/word_processor_integration" target="_blank" rel="noopener">使用插件</a>，以Word为例，在成功安装插件的前提下Word菜单栏中会出现Zotero选项卡，可方便地添加引用和参考文献。</p>
-<h5 id="Papership（ipad-iphone端）"><a href="#Papership（ipad-iphone端）" class="headerlink" title="Papership（ipad/iphone端）"></a>Papership（ipad/iphone端）</h5><p>Zotero只有PC端应用，配合Papership使用可以弥补该不足。用Zotero账户登录Papership应用，并<a href="http://shazino.freshdesk.com/support/solutions/articles/112464-how-to-sync-papership-and-zotero-" target="_blank" rel="noopener">设置</a>Zotero File Hosting（与步骤1.2设置同步类似）就可以在平板和手机上同步阅读文献了。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://sibyl233.github.io/2020/01/08/Zotero简明使用指南/" data-id="ck6hm9ywi0003cc61phiiekio" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-  
-    <a href="/2019/09/23/Semantic-Segmentation/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">语义分割方法整理</div>
-    </a>
-  
-</nav>
-
-  
-</article>
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/指南/">指南</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/清单/">清单</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/胡言/">胡言</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2020/01/08/Zotero简明使用指南/">Zotero简明使用指南</a>
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/">首页</a>
           </li>
         
-          <li>
-            <a href="/2019/09/23/Semantic-Segmentation/">语义分割方法整理</a>
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/archives/">归档</a>
           </li>
         
-          <li>
-            <a href="/2019/07/11/道路场景语义分割/">道路场景语义分割</a>
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/categories/">分类</a>
           </li>
         
-          <li>
-            <a href="/2018/05/11/一个测试/">一个测试</a>
+          
+          
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/about/">关于</a>
+          </li>
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
           </li>
         
       </ul>
     </div>
   </div>
+</nav>
 
-  
-</aside>
-        
+    <div class="view intro-2" id="background"
+         style="background: url('/img/1.jpg')no-repeat center center;
+           background-size: cover;
+           background-attachment: fixed;">
+      <div class="full-bg-img">
+        <div class="mask rgba-black-light flex-center">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+                Zotero简明使用指南
+              
+            </span>
+
+            
+              <br>
+              
+                <p class="mt-3">
+                  <i class="fas fa-calendar-alt" aria-hidden="true"></i>&nbsp;
+                  星期三, 一月 8日 2020, 4:22 下午
+                </p>
+              
+
+              <p>
+                
+
+                
+
+                
+              </p>
+            
+          </div>
+
+          
+        </div>
       </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2020 Sibyl K<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="py-5 z-depth-3" id="board">
+        <div class="post-content mx-auto" id="post">
+          <div class="markdown-body">
+            <h4 id="下载与基本设置"><a href="#下载与基本设置" class="headerlink" title="下载与基本设置"></a>下载与基本设置</h4><a id="more"></a>
+<h5 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h5><p><a href="https://www.zotero.org/download/" target="_blank" rel="noopener">官网下载</a>Zotero和Zotero Connector。前者是管理文献的本体；后者是用于抓取条目和相关附件的浏览器插件。</p>
+<h5 id="设置同步"><a href="#设置同步" class="headerlink" title="设置同步"></a>设置同步</h5><p>Zotero本身自带同步功能，但是自带空间有限，故可以使用webdav连接到其他网盘，以坚果云为例：<a href="http://help.jianguoyun.com/?p=3168" target="_blank" rel="noopener">如何在Zotero中设置webdav连接到坚果云？</a></p>
+<h5 id="设置Zotfile"><a href="#设置Zotfile" class="headerlink" title="设置Zotfile"></a>设置Zotfile</h5><p>Zotfile是一款插件，配合Zotero使用可以更好地管理（批量命名和移除等）文献附件：<a href="http://zotfile.com/#how-to-install--set-up-zotfile" target="_blank" rel="noopener">下载和设置</a>。</p>
+<h4 id="其它功能"><a href="#其它功能" class="headerlink" title="其它功能"></a>其它功能</h4><h5 id="导出参考文献（Word-Latex）"><a href="#导出参考文献（Word-Latex）" class="headerlink" title="导出参考文献（Word/Latex）"></a>导出参考文献（Word/Latex）</h5><p>若<a href="https://www.zotero.org/support/creating_bibliographies" target="_blank" rel="noopener">不使用插件</a>，❶直接拖拽条目至文本编辑器/使用快捷键即可实现单条目的快速复制；❷在Zotero中选取所需条目，右键选择<code>由所选条目创建引文目录</code>即可实现多条目的快速复制。<br>若<a href="https://www.zotero.org/support/word_processor_integration" target="_blank" rel="noopener">使用插件</a>，以Word为例，在成功安装插件的前提下Word菜单栏中会出现Zotero选项卡，可方便地添加引用和参考文献。</p>
+<h5 id="Papership（ipad-iphone端）"><a href="#Papership（ipad-iphone端）" class="headerlink" title="Papership（ipad/iphone端）"></a>Papership（ipad/iphone端）</h5><p>Zotero只有PC端应用，配合Papership使用可以弥补该不足。用Zotero账户登录Papership应用，并<a href="http://shazino.freshdesk.com/support/solutions/articles/112464-how-to-sync-papership-and-zotero-" target="_blank" rel="noopener">设置</a>Zotero File Hosting（与步骤1.2设置同步类似）就可以在平板和手机上同步阅读文献了。</p>
+
+            <hr>
+          </div>
+          <br>
+          <div>
+            <p>
+            
+              <span>
+                <i class="iconfont icon-inbox"></i>
+                
+                  <a class="hover-with-bg" href="/categories/%E6%8C%87%E5%8D%97">指南</a>
+                  &nbsp;
+                
+              </span>&nbsp;&nbsp;
+            
+            
+            </p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-none d-lg-block col-lg-2 toc-container">
+      
+  <div id="toc">
+    <p class="h4"><i class="far fa-list-alt"></i>&nbsp;目录</p>
+    <div id="tocbot"></div>
+  </div>
+
     </div>
   </div>
-</footer>
+</div>
+
+<!-- custom -->
+
+
+<!-- Comments -->
+<div class="col-lg-7 mx-auto nopadding-md">
+  <div class="container comments mx-auto" id="comments">
+    
+      <br><br>
+      
+      
+
+    
+  </div>
+</div>
+
+    
+  </main>
+
+  
+    <a class="z-depth-1" id="scroll-top-button" href="#" role="button">
+      <i class="fa fa-chevron-up scroll-top-arrow" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
     </div>
-    <nav id="mobile-nav">
+  </div>
+</div>
   
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><b>Hexo</b></a>
+    <i class="iconfont icon-love"></i>
+    <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"> <b>Fluid</b></a>
+    <br>
+
     
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+    
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+    <!-- cnzz Analytics icon -->
+    
+
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script src="/lib/jquery/jquery.min.js" ></script>
+<script src="/lib/popper/popper.min.js" ></script>
+<script src="/lib/bootstrap/js/bootstrap.min.js" ></script>
+<script src="/lib/mdbootstrap/js/mdb.min.js" ></script>
+<script src="/js/main.js" ></script>
 
 
-<script src="/js/script.js"></script>
+  <script src="/js/lazyload.js" ></script>
 
 
 
-  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+    <script src="/lib/tocbot/tocbot.min.js" ></script>
+  
+  <script src="/js/post.js" ></script>
+
+
+
+  <script src="/lib/smooth-scroll/smooth-scroll.min.js" ></script>
+
+
+
+
+<!-- Plugins -->
+
+
+  
+
+  
+
+  
+
+  
+
+  <!-- cnzz Analytics -->
+  
+
+
+
+
+
+
+
+  <script src="/lib/anchor/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "false",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      getSearchFile(path);
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script src="/lib/fancybox/jquery.fancybox.min.js" ></script>
+  <script>
+    $("#post img:not(.no-zoom img, img[no-zoom])").each(
+      function () {
+        var element = document.createElement("a");
+        $(element).attr("data-fancybox", "images");
+        $(element).attr("href", $(this).attr("src"));
+        $(this).wrap(element);
+      }
+    );
+  </script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>

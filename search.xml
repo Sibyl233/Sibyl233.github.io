@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Zotero简明使用指南]]></title>
     <url>%2F2020%2F01%2F08%2FZotero%E7%AE%80%E6%98%8E%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97%2F</url>
-    <content type="text"><![CDATA[下载与基本设置下载官网下载Zotero和Zotero Connector。前者是管理文献的本体；后者是用于抓取条目和相关附件的浏览器插件。 设置同步Zotero本身自带同步功能，但是自带空间有限，故可以使用webdav连接到其他网盘，以坚果云为例：如何在Zotero中设置webdav连接到坚果云？ 设置ZotfileZotfile是一款插件，配合Zotero使用可以更好地管理（批量命名和移除等）文献附件：下载和设置。 其它功能导出参考文献（Word/Latex）若不使用插件，❶直接拖拽条目至文本编辑器/使用快捷键即可实现单条目的快速复制；❷在Zotero中选取所需条目，右键选择由所选条目创建引文目录即可实现多条目的快速复制。若使用插件，以Word为例，在成功安装插件的前提下Word菜单栏中会出现Zotero选项卡，可方便地添加引用和参考文献。 Papership（ipad/iphone端）Zotero只有PC端应用，配合Papership使用可以弥补该不足。用Zotero账户登录Papership应用，并设置Zotero File Hosting（与步骤1.2设置同步类似）就可以在平板和手机上同步阅读文献了。]]></content>
+    <content type="text"><![CDATA[下载与基本设置 下载官网下载Zotero和Zotero Connector。前者是管理文献的本体；后者是用于抓取条目和相关附件的浏览器插件。 设置同步Zotero本身自带同步功能，但是自带空间有限，故可以使用webdav连接到其他网盘，以坚果云为例：如何在Zotero中设置webdav连接到坚果云？ 设置ZotfileZotfile是一款插件，配合Zotero使用可以更好地管理（批量命名和移除等）文献附件：下载和设置。 其它功能导出参考文献（Word/Latex）若不使用插件，❶直接拖拽条目至文本编辑器/使用快捷键即可实现单条目的快速复制；❷在Zotero中选取所需条目，右键选择由所选条目创建引文目录即可实现多条目的快速复制。若使用插件，以Word为例，在成功安装插件的前提下Word菜单栏中会出现Zotero选项卡，可方便地添加引用和参考文献。 Papership（ipad/iphone端）Zotero只有PC端应用，配合Papership使用可以弥补该不足。用Zotero账户登录Papership应用，并设置Zotero File Hosting（与步骤1.2设置同步类似）就可以在平板和手机上同步阅读文献了。]]></content>
       <categories>
         <category>指南</category>
       </categories>
