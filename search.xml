@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Aseprite基础操作]]></title>
     <url>%2F2020%2F02%2F18%2FAseprite%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C%2F</url>
-    <content type="text"><![CDATA[Aseprite是一个简单易上手的2D像素画工具：官网下载 | Steam下载 | 推荐教程 Basic ToolsPen Tool [B] : pixel-perfect | symmetry option | ink option Line Tool [L] : shift+L(特殊角度) | ctrl+L(中心点) Shape Tool [U]：shift+L(正方正圆) | ctrl+L(中心点) Contour [D] : 填充 Eraser [E] : 擦除 Eyedropper [ALT] : 取色 Paint Bucket [G] : continuious | 配合Selection Tool Selection Tool [M] or [W] : continuious | 包含魔棒 | ctrl+D(取消选区) LayersPress [TAP] Color ToolPalette Editor [F4] Sorting Palette : 比如创建两种颜色之间的色板并排序by gradient Presets ：预设调色板 Options : Create palette from the current seprite]]></content>
+    <content type="text"><![CDATA[Aseprite是一个简单易上手的2D像素画工具：官网下载 | Steam下载 | 推荐教程 Basic Tools Pen Tool [B] : pixel-perfect(防double) | symmetry option(对称) | ink option(是否加透明通道) Line Tool [L] : shift+L(特殊角度) | ctrl+L(中心点) Shape Tool [U]：shift+L(正方正圆) | ctrl+L(中心点) Contour [D] : 填充 Eraser [E] : 擦除 Eyedropper [ALT] : 取色 Paint Bucket [G] : continuious | 配合Selection Tool Selection Tool [M] or [W] : continuious | 包含魔棒 | ctrl+D(取消选区) Color Tool Palette Editor [F4] Sorting Palette : 比如创建两种颜色之间的色板并按gradient排序 Presets ：预设调色板 Options : Create palette from the current seprite(从截图生成调色板) Layers Press [TAP]]]></content>
       <categories>
         <category>指南</category>
       </categories>
