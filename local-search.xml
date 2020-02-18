@@ -4,11 +4,30 @@
   
   
   <entry>
+    <title>Aseprite基础操作</title>
+    <link href="/2020/02/18/Aseprite%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/"/>
+    <url>/2020/02/18/Aseprite%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/</url>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Aseprite<a id="more"></a>是一个简单易上手的2D像素画工具：<a href="https://www.aseprite.org/download/" target="_blank" rel="noopener">官网下载</a> | <a href="https://store.steampowered.com/app/431730/Aseprite/" target="_blank" rel="noopener">Steam下载</a> | <a href="https://www.aseprite.org/docs/tutorial/" target="_blank" rel="noopener">推荐教程</a></p><h4 id="Basic-Tools"><a href="#Basic-Tools" class="headerlink" title="Basic Tools"></a>Basic Tools</h4><p>Pen Tool [B] : pixel-perfect | symmetry option | ink option</p><p>Line Tool [L] : shift+L(特殊角度) | ctrl+L(中心点)</p><p>Shape Tool [U]：shift+L(正方正圆) | ctrl+L(中心点)</p><p>Contour [D] : 填充</p><p>Eraser [E] : 擦除</p><p>Eyedropper [ALT] : 取色</p><p>Paint Bucket [G] : continuious | 配合Selection Tool</p><p>Selection Tool [M] or [W] : continuious | 包含魔棒 | ctrl+D(取消选区)</p><h4 id="Layers"><a href="#Layers" class="headerlink" title="Layers"></a>Layers</h4><p>Press [TAP]</p><h4 id="Color-Tool"><a href="#Color-Tool" class="headerlink" title="Color Tool"></a>Color Tool</h4><p>Palette Editor [F4]</p><p>Sorting Palette : 比如创建两种颜色之间的色板并排序by gradient</p><p>Presets ：预设调色板</p><p>Options : Create palette from the current seprite</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>指南</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Zotero简明使用指南</title>
     <link href="/2020/01/08/Zotero%E7%AE%80%E6%98%8E%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/"/>
     <url>/2020/01/08/Zotero%E7%AE%80%E6%98%8E%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</url>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="下载与基本设置"><a href="#下载与基本设置" class="headerlink" title="下载与基本设置"></a>下载与基本设置</h4><a id="more"></a><h5 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h5><p><a href="https://www.zotero.org/download/" target="_blank" rel="noopener">官网下载</a>Zotero和Zotero Connector。前者是管理文献的本体；后者是用于抓取条目和相关附件的浏览器插件。</p><h5 id="设置同步"><a href="#设置同步" class="headerlink" title="设置同步"></a>设置同步</h5><p>Zotero本身自带同步功能，但是自带空间有限，故可以使用webdav连接到其他网盘，以坚果云为例：<a href="http://help.jianguoyun.com/?p=3168" target="_blank" rel="noopener">如何在Zotero中设置webdav连接到坚果云？</a></p><h5 id="设置Zotfile"><a href="#设置Zotfile" class="headerlink" title="设置Zotfile"></a>设置Zotfile</h5><p>Zotfile是一款插件，配合Zotero使用可以更好地管理（批量命名和移除等）文献附件：<a href="http://zotfile.com/#how-to-install--set-up-zotfile" target="_blank" rel="noopener">下载和设置</a>。</p><h4 id="其它功能"><a href="#其它功能" class="headerlink" title="其它功能"></a>其它功能</h4><h5 id="导出参考文献（Word-Latex）"><a href="#导出参考文献（Word-Latex）" class="headerlink" title="导出参考文献（Word/Latex）"></a>导出参考文献（Word/Latex）</h5><p>若<a href="https://www.zotero.org/support/creating_bibliographies" target="_blank" rel="noopener">不使用插件</a>，❶直接拖拽条目至文本编辑器/使用快捷键即可实现单条目的快速复制；❷在Zotero中选取所需条目，右键选择<code>由所选条目创建引文目录</code>即可实现多条目的快速复制。<br>若<a href="https://www.zotero.org/support/word_processor_integration" target="_blank" rel="noopener">使用插件</a>，以Word为例，在成功安装插件的前提下Word菜单栏中会出现Zotero选项卡，可方便地添加引用和参考文献。</p><h5 id="Papership（ipad-iphone端）"><a href="#Papership（ipad-iphone端）" class="headerlink" title="Papership（ipad/iphone端）"></a>Papership（ipad/iphone端）</h5><p>Zotero只有PC端应用，配合Papership使用可以弥补该不足。用Zotero账户登录Papership应用，并<a href="http://shazino.freshdesk.com/support/solutions/articles/112464-how-to-sync-papership-and-zotero-" target="_blank" rel="noopener">设置</a>Zotero File Hosting（与步骤1.2设置同步类似）就可以在平板和手机上同步阅读文献了。</p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="下载与基本设置"><a href="#下载与基本设置" class="headerlink" title="下载与基本设置"></a>下载与基本设置</h4><a id="more"></a><ul><li><p>下载<br><a href="https://www.zotero.org/download/" target="_blank" rel="noopener">官网下载</a>Zotero和Zotero Connector。前者是管理文献的本体；后者是用于抓取条目和相关附件的浏览器插件。</p></li><li><p>设置同步<br>Zotero本身自带同步功能，但是自带空间有限，故可以使用webdav连接到其他网盘，以坚果云为例：<a href="http://help.jianguoyun.com/?p=3168" target="_blank" rel="noopener">如何在Zotero中设置webdav连接到坚果云？</a></p></li><li><p>设置Zotfile<br>Zotfile是一款插件，配合Zotero使用可以更好地管理（批量命名和移除等）文献附件：<a href="http://zotfile.com/#how-to-install--set-up-zotfile" target="_blank" rel="noopener">下载和设置</a>。</p></li></ul><h4 id="其它功能"><a href="#其它功能" class="headerlink" title="其它功能"></a>其它功能</h4><ul><li>导出参考文献（Word/Latex）<br>若<a href="https://www.zotero.org/support/creating_bibliographies" target="_blank" rel="noopener">不使用插件</a>，❶直接拖拽条目至文本编辑器/使用快捷键即可实现单条目的快速复制；❷在Zotero中选取所需条目，右键选择<code>由所选条目创建引文目录</code>即可实现多条目的快速复制。<br>若<a href="https://www.zotero.org/support/word_processor_integration" target="_blank" rel="noopener">使用插件</a>，以Word为例，在成功安装插件的前提下Word菜单栏中会出现Zotero选项卡，可方便地添加引用和参考文献。</li><li>Papership（ipad/iphone端）<br>Zotero只有PC端应用，配合Papership使用可以弥补该不足。用Zotero账户登录Papership应用，并<a href="http://shazino.freshdesk.com/support/solutions/articles/112464-how-to-sync-papership-and-zotero-" target="_blank" rel="noopener">设置</a>Zotero File Hosting（与步骤1.2设置同步类似）就可以在平板和手机上同步阅读文献了。</li></ul>]]></content>
     
     
     <categories>
