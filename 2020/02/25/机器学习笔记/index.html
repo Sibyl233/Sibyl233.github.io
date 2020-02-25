@@ -15,7 +15,7 @@
   <meta name="description" content="">
   <meta name="author" content="Sibyl">
   <meta name="keywords" content="">
-  <title>语义分割方法整理 - 备忘录</title>
+  <title>机器学习笔记 - 备忘录</title>
 
   <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
@@ -104,7 +104,7 @@
           <div class="container text-center white-text fadeInUp">
             <span class="h2" id="subtitle">
               
-                语义分割方法整理
+                机器学习笔记
               
             </span>
 
@@ -113,7 +113,7 @@
               
                 <p class="mt-3">
                   <i class="fas fa-calendar-alt" aria-hidden="true"></i>&nbsp;
-                  星期一, 九月 23日 2019, 1:43 下午
+                  星期二, 二月 25日 2020, 5:03 下午
                 </p>
               
 
@@ -144,91 +144,7 @@
       <div class="py-5 z-depth-3" id="board">
         <div class="post-content mx-auto" id="post">
           <div class="markdown-body">
-            <p>持续更新<a id="more"></a></p>
-<h4 id="Basis"><a href="#Basis" class="headerlink" title="Basis"></a>Basis</h4><ul>
-<li>FCN<ul>
-<li>[FCN] Fully Convolutional Networks for Semantic Segmentation</li>
-</ul>
-</li>
-<li>DeepLab<ul>
-<li>[DeepLab v1] Semantic Image Segmentation with Deep Convolutional Nets and Fully Connected CRFs </li>
-<li>[DeepLab v2] DeepLab: Semantic Image Segmentation with Deep Convolutional Nets, Atrous Convolution, and Fully Connected CRFs</li>
-<li>[DeepLab v3] Rethinking Atrous Convolution for Semantic Image Segmentation </li>
-<li>[DeepLab v3+] Encoder-Decoder with Atrous Separable Convolution for Semantic Image Segmentation</li>
-</ul>
-</li>
-<li>Encoder-decoder Architecture<ul>
-<li>[U-Net] U-Net: Convolutional Networks for Biomedical Image Segmentation </li>
-<li>[SegNet] SegNet: A Deep Convolutional Encoder-Decoder Architecture for Scene Segmentation</li>
-<li>[DeconvNet] Learning Deconvolution Network for Semantic Segmentation</li>
-<li>[RefineNet] RefineNet: Multi-Path Refinement Networks for High-Resolution Semantic Segmentation</li>
-</ul>
-</li>
-</ul>
-<h4 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h4><h5 id="CRF"><a href="#CRF" class="headerlink" title="CRF"></a>CRF</h5><ul>
-<li>[CRFasRNN] Efficient Inference in Fully Connected CRFs with Gaussian Edge Potentials</li>
-<li>[MRF] Semantic Image Segmentation via Deep Parsing Network</li>
-<li>[GRF] Fast, Exact and Multi-Scale Inference for Semantic Image Segmentation with Deep Gaussian CRFs</li>
-</ul>
-<h5 id="Atrous-Dilated-Convolution"><a href="#Atrous-Dilated-Convolution" class="headerlink" title="Atrous/Dilated Convolution"></a>Atrous/Dilated Convolution</h5><ul>
-<li>[DUC-HDC] Understanding Convolution for Semantic Segmentation</li>
-<li>[DRN] Dilated Residual Networks</li>
-<li>Smoothed Dilated Convolutions for Improved Dense Prediction</li>
-<li>Efficient Smoothing of Dilated Convolutions for Image Segmentation</li>
-<li>[FastFCN] FastFCN: Rethinking Dilated Convolution in the Backbone for Semantic Segmentation</li>
-</ul>
-<h5 id="Context-Aggregation"><a href="#Context-Aggregation" class="headerlink" title="Context Aggregation"></a>Context Aggregation</h5><ul>
-<li>Pooling<ul>
-<li>[ParseNet] ParseNet: Looking Wider to See Better</li>
-<li>[PSPNet] Pyramid Scene Parsing Network</li>
-<li>[DenseASPP] DenseASPP for Semantic Segmentation in Street Scenes</li>
-<li>[VortexPooling] Vortex Pooling: Improving Context Representation in Semantic Segmentation</li>
-</ul>
-</li>
-<li>Large Kernel<ul>
-<li>[GCN] Large Kernel Matters — Improve Semantic Segmentation by Global Convolutional Network</li>
-<li>[ExFuse] ExFuse: Enhancing Feature Fusion for Semantic Segmentation</li>
-</ul>
-</li>
-</ul>
-<h5 id="Attention-Mechanism"><a href="#Attention-Mechanism" class="headerlink" title="Attention Mechanism"></a>Attention Mechanism</h5><ul>
-<li>Channel Reweighting<ul>
-<li>[DFN] Learning a Discriminative Feature Network for Semantic Segmentation</li>
-<li>[EncNet] Context Encoding for Semantic Segmentation[</li>
-<li>[SENet] Squeeze-and-Excitation Networks</li>
-<li>Pyramid Attention Network for Semantic Segmentation</li>
-</ul>
-</li>
-<li>Spatial Attention<ul>
-<li>[OCNet] OCNet: Object Context Network for Scene Parsing</li>
-<li>[DANet] Dual Attention Networks for Multimodal Reasoning and Matching</li>
-<li>[PSANet] PSANet: Point-wise Spatial Attention Network for Scene Parsing</li>
-<li>[CCNet] CCNet: Criss-Cross Attention for Semantic Segmentation</li>
-</ul>
-</li>
-</ul>
-<h5 id="Graph-Convolution"><a href="#Graph-Convolution" class="headerlink" title="Graph Convolution"></a>Graph Convolution</h5><ul>
-<li>[GloRe] Graph-Based Global Reasoning Networks</li>
-<li>Beyond Grids: Learning Graph Representations for Visual Recognition</li>
-</ul>
-<h4 id="Real-time-Method"><a href="#Real-time-Method" class="headerlink" title="Real-time Method"></a>Real-time Method</h4><h5 id="Convolution-Factorization"><a href="#Convolution-Factorization" class="headerlink" title="Convolution Factorization"></a>Convolution Factorization</h5><ul>
-<li>[ENet] ENet: A Deep Neural Network Architecture for Real-Time Semantic Segmentation</li>
-<li>[ERFNet]  ERFNet: Efficient Residual Factorized ConvNet for Real-Time Semantic Segmentation</li>
-<li>[ESPNet] ESPNet: Efficient Spatial Pyramid of Dilated Convolutions for Semantic Segmentation</li>
-<li>[ESNet] ESNet: An Efficient Symmetric Network for Real-time Semantic Segmentation</li>
-<li>[LEDNet] LEDNet: A Lightweight Encoder-Decoder Network for Real-Time Semantic Segmentation</li>
-<li>[DABNet] DABNet: Depth-wise Asymmetric Bottleneck for Real-time Semantic Segmentation</li>
-</ul>
-<h5 id="Multi-branch"><a href="#Multi-branch" class="headerlink" title="Multi-branch"></a>Multi-branch</h5><ul>
-<li>[ICNet] ICNet for Real-Time Semantic Segmentation on High-Resolution Images</li>
-<li>[ContextNet] ContextNet: Exploring Context and Detail for Semantic Segmentation in Real-time</li>
-<li>[BiSeNet] BiSeNet: Bilateral Segmentation Network for Real-Time Semantic Segmentation</li>
-</ul>
-<h4 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h4><ul>
-<li>语义分割论文整理 [<a href="https://zhangbin0917.github.io/2018/09/18/Semantic-Segmentation/" target="_blank" rel="noopener">blog</a>]</li>
-<li>Survey on semantic segmentation using deep learning techniques [<a href="https://www.sciencedirect.com/science/article/pii/S092523121930181X" target="_blank" rel="noopener">paper</a>]</li>
-</ul>
-
+            <h2 id="1-引言"><a href="#1-引言" class="headerlink" title="1 引言"></a>1 引言</h2>
             <hr>
           </div>
           <br>
@@ -275,8 +191,8 @@
     <div id="disqus_thread"></div>
     <script>
       var disqus_config = function () {
-        this.page.url = 'http://sibyl233.github.io/2019/09/23/Semantic-Segmentation/';
-        this.page.identifier = '/2019/09/23/Semantic-Segmentation/';
+        this.page.url = 'http://sibyl233.github.io/2020/02/25/机器学习笔记/';
+        this.page.identifier = '/2020/02/25/机器学习笔记/';
       };
       var oldLoad = window.onload;
       window.onload = function () {
