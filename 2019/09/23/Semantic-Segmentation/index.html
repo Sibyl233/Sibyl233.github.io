@@ -17,18 +17,18 @@
   <meta http-equiv="window-target" content="_top">
   
   
-  <title>语义分割方法整理 | Hexo</title>
-  <meta name="description" content="持续更新">
+  <title>语义分割方法整理 | Memo</title>
+  <meta name="description" content="Basis FCN [FCN] Fully Convolutional Networks for Semantic Segmentation   DeepLab [DeepLab v1] Semantic Image Segmentation with Deep Convolutional Nets and Fully Connected CRFs  [DeepLab v2] DeepLab: S">
 <meta property="og:type" content="article">
 <meta property="og:title" content="语义分割方法整理">
 <meta property="og:url" content="http://sibyl233.github.io/2019/09/23/Semantic-Segmentation/index.html">
 <meta property="og:site_name" content="备忘录">
-<meta property="og:description" content="持续更新">
+<meta property="og:description" content="Basis FCN [FCN] Fully Convolutional Networks for Semantic Segmentation   DeepLab [DeepLab v1] Semantic Image Segmentation with Deep Convolutional Nets and Fully Connected CRFs  [DeepLab v2] DeepLab: S">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-04-20T14:07:36.364Z">
+<meta property="og:updated_time" content="2020-04-21T12:12:43.022Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="语义分割方法整理">
-<meta name="twitter:description" content="持续更新">
+<meta name="twitter:description" content="Basis FCN [FCN] Fully Convolutional Networks for Semantic Segmentation   DeepLab [DeepLab v1] Semantic Image Segmentation with Deep Convolutional Nets and Fully Connected CRFs  [DeepLab v2] DeepLab: S">
   <!-- Canonical links -->
   <link rel="canonical" href="http://sibyl233.github.io/2019/09/23/Semantic-Segmentation/index.html">
   
@@ -55,7 +55,7 @@
         <a id="avatar" href="http://sibylk.site" target="_blank">
           <img class="img-circle img-rotate" src="/images/avatar.png" width="200" height="200">
         </a>
-        <h2 id="name" class="hidden-xs hidden-sm">Sibyl</h2>
+        <h2 id="name" class="hidden-xs hidden-sm">Sibyl K</h2>
         <h3 id="title" class="hidden-xs hidden-sm hidden-md"></h3>
         <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> Hangzhou, China</small>
       </div>
@@ -116,16 +116,6 @@
         </li>
         
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories">
-            
-            <i class="icon icon-folder"></i>
-            
-            <span class="menu-title">分类</span>
-          </a>
-        </li>
-        
-        
         <li class="menu-item menu-item-links">
           <a href="/links">
             
@@ -178,9 +168,14 @@
 
     
       
+  <div class="widget">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget-body">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/工具/">工具</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
 
-    
-      
+
     
       
   <div class="widget">
@@ -284,6 +279,15 @@
 
   
   
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <nav id="toc" class="article-toc">
+      <h3 class="toc-title">文章目录</h3>
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#Basis"><span class="toc-number">1.</span> <span class="toc-text">Basis</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Method"><span class="toc-number">2.</span> <span class="toc-text">Method</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#CRF"><span class="toc-number">2.1.</span> <span class="toc-text">CRF</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Atrous-Dilated-Convolution"><span class="toc-number">2.2.</span> <span class="toc-text">Atrous/Dilated Convolution</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Context-Aggregation"><span class="toc-number">2.3.</span> <span class="toc-text">Context Aggregation</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Attention-Mechanism"><span class="toc-number">2.4.</span> <span class="toc-text">Attention Mechanism</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Graph-Convolution"><span class="toc-number">2.5.</span> <span class="toc-text">Graph Convolution</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Real-time-Method"><span class="toc-number">3.</span> <span class="toc-text">Real-time Method</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Convolution-Factorization"><span class="toc-number">3.1.</span> <span class="toc-text">Convolution Factorization</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Multi-branch"><span class="toc-number">3.2.</span> <span class="toc-text">Multi-branch</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Reference"><span class="toc-number">4.</span> <span class="toc-text">Reference</span></a></li></ol>
+    </nav>
+  </div>
+</aside>
+
 <main class="main" role="main">
   <div class="content">
   <article id="post-Semantic-Segmentation" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
@@ -321,8 +325,7 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <p>持续更新<a id="more"></a></p>
-<h4 id="Basis"><a href="#Basis" class="headerlink" title="Basis"></a>Basis</h4><ul>
+        <h4 id="Basis"><a href="#Basis" class="headerlink" title="Basis"></a>Basis</h4><ul>
 <li>FCN<ul>
 <li>[FCN] Fully Convolutional Networks for Semantic Segmentation</li>
 </ul>
@@ -433,7 +436,7 @@
         </a>
       </div>
       <div class="media-body">
-        <h3 class="media-heading"><a href="http://sibylk.site" target="_blank"><span class="text-dark">Sibyl</span><small class="ml-1x"></small></a></h3>
+        <h3 class="media-heading"><a href="http://sibylk.site" target="_blank"><span class="text-dark">Sibyl K</span><small class="ml-1x"></small></a></h3>
         <div></div>
       </div>
     </figure>
@@ -469,6 +472,15 @@
       <a href="/2019/07/11/道路场景语义分割/" title="道路场景语义分割"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
+    
+    <li class="toggle-toc">
+      <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button">
+        <span>[&nbsp;</span><span>文章目录</span>
+        <i class="text-collapsed icon icon-anchor"></i>
+        <i class="text-in icon icon-close"></i>
+        <span>]</span>
+      </a>
+    </li>
     
   </ul>
   

@@ -17,7 +17,7 @@
   <meta http-equiv="window-target" content="_top">
   
   
-  <title>机器学习笔记 | Hexo</title>
+  <title>机器学习笔记 | Memo</title>
   <meta name="description" content="1 引言1.1 机器学习定义第一个定义——Arthur Samuel对机器学习的定义：  机器学习是这样的领域，它赋予计算机学习的能力，这种学习能力不是通过显著式编程获得的。   显著式编程：比如发一系列指令（左转-开门-右转……）让机器人到教室门外的咖啡机前冲咖啡，其劣势是需要把机器人所处的环境调查得一清二楚， 非显著式编程：让计算机自己总结规律的编程方法。比如规定行为（如左转、后退等）和收益函">
 <meta property="og:type" content="article">
 <meta property="og:title" content="机器学习笔记">
@@ -38,7 +38,7 @@
 <meta property="og:image" content="http://sibyl233.github.io/2020/02/25/机器学习笔记/sibyl/Personal/blog/source/_posts/2020-02-25-机器学习笔记/3例_2.png">
 <meta property="og:image" content="https://panchuang.net/wp-content/uploads/2019/11/1-1573310259.png">
 <meta property="og:image" content="https://panchuang.net/wp-content/uploads/2019/11/9-1573310259.png">
-<meta property="og:updated_time" content="2020-04-08T13:46:15.633Z">
+<meta property="og:updated_time" content="2020-04-21T12:12:53.874Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="机器学习笔记">
 <meta name="twitter:description" content="1 引言1.1 机器学习定义第一个定义——Arthur Samuel对机器学习的定义：  机器学习是这样的领域，它赋予计算机学习的能力，这种学习能力不是通过显著式编程获得的。   显著式编程：比如发一系列指令（左转-开门-右转……）让机器人到教室门外的咖啡机前冲咖啡，其劣势是需要把机器人所处的环境调查得一清二楚， 非显著式编程：让计算机自己总结规律的编程方法。比如规定行为（如左转、后退等）和收益函">
@@ -69,7 +69,7 @@
         <a id="avatar" href="http://sibylk.site" target="_blank">
           <img class="img-circle img-rotate" src="/images/avatar.png" width="200" height="200">
         </a>
-        <h2 id="name" class="hidden-xs hidden-sm">Sibyl</h2>
+        <h2 id="name" class="hidden-xs hidden-sm">Sibyl K</h2>
         <h3 id="title" class="hidden-xs hidden-sm hidden-md"></h3>
         <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> Hangzhou, China</small>
       </div>
@@ -130,16 +130,6 @@
         </li>
         
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories">
-            
-            <i class="icon icon-folder"></i>
-            
-            <span class="menu-title">分类</span>
-          </a>
-        </li>
-        
-        
         <li class="menu-item menu-item-links">
           <a href="/links">
             
@@ -192,9 +182,14 @@
 
     
       
+  <div class="widget">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget-body">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/工具/">工具</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
 
-    
-      
+
     
       
   <div class="widget">
@@ -298,6 +293,15 @@
 
   
   
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <nav id="toc" class="article-toc">
+      <h3 class="toc-title">文章目录</h3>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-引言"><span class="toc-number">1.</span> <span class="toc-text">1 引言</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-机器学习定义"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 机器学习定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-机器学习任务的分类"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 机器学习任务的分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-机器学习算法的过程"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 机器学习算法的过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-没有免费午餐定理"><span class="toc-number">1.4.</span> <span class="toc-text">1.4 没有免费午餐定理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-支持向量机"><span class="toc-number">2.</span> <span class="toc-text">2 支持向量机</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-问题描述"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 问题描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-线性可分-硬间隔"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 线性可分-硬间隔</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-非线性可分-软间隔"><span class="toc-number">2.3.</span> <span class="toc-text">2.3 非线性可分-软间隔</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-非线性可分-核技巧"><span class="toc-number">2.4.</span> <span class="toc-text">2.4 非线性可分-核技巧</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-原问题和对偶问题"><span class="toc-number">2.5.</span> <span class="toc-text">2.5 原问题和对偶问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-6-SVM转化为对偶问题"><span class="toc-number">2.6.</span> <span class="toc-text">2.6 SVM转化为对偶问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-7-算法总体流程"><span class="toc-number">2.7.</span> <span class="toc-text">2.7 算法总体流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-8-兵王问题"><span class="toc-number">2.8.</span> <span class="toc-text">2.8 兵王问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-9-性能度量"><span class="toc-number">2.9.</span> <span class="toc-text">2.9 性能度量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-10-SVM求解多分类问题"><span class="toc-number">2.10.</span> <span class="toc-text">2.10 SVM求解多分类问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-人工神经网络"><span class="toc-number">3.</span> <span class="toc-text">3 人工神经网络</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-神经元的数学模型"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 神经元的数学模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-感知器算法及其意义"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 感知器算法及其意义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-多层神经网络"><span class="toc-number">3.3.</span> <span class="toc-text">3.3 多层神经网络</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-梯度下降法"><span class="toc-number">3.4.</span> <span class="toc-text">3.4 梯度下降法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-后向传播算法"><span class="toc-number">3.5.</span> <span class="toc-text">3.5 后向传播算法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-6-三个改进"><span class="toc-number">3.6.</span> <span class="toc-text">3.6 三个改进</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-强化学习"><span class="toc-number">4.</span> <span class="toc-text">5 强化学习</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-传统强化学习算法"><span class="toc-number">4.1.</span> <span class="toc-text">5.1 传统强化学习算法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-深度强化学习"><span class="toc-number">4.2.</span> <span class="toc-text">5.2 深度强化学习</span></a></li></ol></li></ol>
+    </nav>
+  </div>
+</aside>
+
 <main class="main" role="main">
   <div class="content">
   <article id="post-机器学习笔记" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
@@ -393,10 +397,7 @@
 <blockquote>
 <p>在特征空间上距离接近的样本，他们属于同一个类别的概率会更高。</p>
 </blockquote>
-<div style="page-break-after: always;"></div>
-## 2 支持向量机
-
-<h3 id="2-1-问题描述"><a href="#2-1-问题描述" class="headerlink" title="2.1 问题描述"></a>2.1 问题描述</h3><p>首先，明确线性可分和非线性可分的基础概念。</p>
+<h2 id="2-支持向量机"><a href="#2-支持向量机" class="headerlink" title="2 支持向量机"></a>2 支持向量机</h2><h3 id="2-1-问题描述"><a href="#2-1-问题描述" class="headerlink" title="2.1 问题描述"></a>2.1 问题描述</h3><p>首先，明确线性可分和非线性可分的基础概念。</p>
 <ul>
 <li><p>直观定义：</p>
 <ul>
@@ -515,10 +516,9 @@
 <p>所以往往综合上述 2 种策略，构造树形分类器。如下图所示，8类只需要构造7个支持向量机，同时兼顾了样本数的平衡。值得一提的是，我们需要保证每个分类器区分的两类的差别是显著的，对于这一点我们可以利用<strong>聚类算法/决策树算法</strong>来解决。</p>
 <img src="/2020/02/25/机器学习笔记/sibyl/Personal/blog/source/_posts/2020-02-25-机器学习笔记/树状分类器.png" alt="树状分类器" style="zoom:33%;">
 
-<div style="page-break-after: always;"></div>
-## 3 人工神经网络
 
-<h3 id="3-1-神经元的数学模型"><a href="#3-1-神经元的数学模型" class="headerlink" title="3.1 神经元的数学模型"></a>3.1 神经元的数学模型</h3><p>人工智能的 2 个学派：</p>
+
+<h2 id="3-人工神经网络"><a href="#3-人工神经网络" class="headerlink" title="3 人工神经网络"></a>3 人工神经网络</h2><h3 id="3-1-神经元的数学模型"><a href="#3-1-神经元的数学模型" class="headerlink" title="3.1 神经元的数学模型"></a>3.1 神经元的数学模型</h3><p>人工智能的 2 个学派：</p>
 <ul>
 <li>仿生学派：如人工神经网络</li>
 <li>数理学派：如支持向量机</li>
@@ -665,7 +665,7 @@ $$
         </a>
       </div>
       <div class="media-body">
-        <h3 class="media-heading"><a href="http://sibylk.site" target="_blank"><span class="text-dark">Sibyl</span><small class="ml-1x"></small></a></h3>
+        <h3 class="media-heading"><a href="http://sibylk.site" target="_blank"><span class="text-dark">Sibyl K</span><small class="ml-1x"></small></a></h3>
         <div></div>
       </div>
     </figure>
@@ -697,6 +697,15 @@ $$
       <a href="/2020/01/08/Zotero简明使用指南/" title="Zotero简明使用指南"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
+    
+    <li class="toggle-toc">
+      <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button">
+        <span>[&nbsp;</span><span>文章目录</span>
+        <i class="text-collapsed icon icon-anchor"></i>
+        <i class="text-in icon icon-close"></i>
+        <span>]</span>
+      </a>
+    </li>
     
   </ul>
   
