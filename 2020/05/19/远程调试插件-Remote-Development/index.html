@@ -17,16 +17,21 @@
   <meta http-equiv="window-target" content="_top">
   
   
-  <title>归档: 2019/9 | Memo</title>
-  <meta property="og:type" content="website">
-<meta property="og:title" content="备忘录">
-<meta property="og:url" content="http://sibyl233.github.io/archives/2019/09/index.html">
+  <title>远程调试插件 - Remote Development | Memo</title>
+  <meta name="description" content="环境和前提 本地 macOS Mojave 远程服务器 Ubuntu 14.04.6 LTS 本地已安装 VSCode，与服务器已建立 SSH 连接  安装扩展 Remote Development在 VSCode 的 Extensions 中搜索 Remote Development 并安装，详见官方文档。 配置 Remote-SSH快捷键 command + shift + p 调出 Comm">
+<meta name="keywords" content="工具">
+<meta property="og:type" content="article">
+<meta property="og:title" content="远程调试插件 - Remote Development">
+<meta property="og:url" content="http://sibyl233.github.io/2020/05/19/远程调试插件-Remote-Development/index.html">
 <meta property="og:site_name" content="备忘录">
+<meta property="og:description" content="环境和前提 本地 macOS Mojave 远程服务器 Ubuntu 14.04.6 LTS 本地已安装 VSCode，与服务器已建立 SSH 连接  安装扩展 Remote Development在 VSCode 的 Extensions 中搜索 Remote Development 并安装，详见官方文档。 配置 Remote-SSH快捷键 command + shift + p 调出 Comm">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-05-19T04:46:14.621Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="备忘录">
+<meta name="twitter:title" content="远程调试插件 - Remote Development">
+<meta name="twitter:description" content="环境和前提 本地 macOS Mojave 远程服务器 Ubuntu 14.04.6 LTS 本地已安装 VSCode，与服务器已建立 SSH 连接  安装扩展 Remote Development在 VSCode 的 Extensions 中搜索 Remote Development 并安装，详见官方文档。 配置 Remote-SSH快捷键 command + shift + p 调出 Comm">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://sibyl233.github.io/archives/2019/09/index.html">
+  <link rel="canonical" href="http://sibyl233.github.io/2020/05/19/远程调试插件-Remote-Development/index.html">
   
     <link rel="alternate" href="/atom.xml" title="备忘录" type="application/atom+xml">
   
@@ -275,49 +280,151 @@
 
   
   
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <nav id="toc" class="article-toc">
+      <h3 class="toc-title">文章目录</h3>
+      <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#环境和前提"><span class="toc-number">1.</span> <span class="toc-text">环境和前提</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#安装扩展-Remote-Development"><span class="toc-number">2.</span> <span class="toc-text">安装扩展 Remote Development</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#配置-Remote-SSH"><span class="toc-number">3.</span> <span class="toc-text">配置 Remote-SSH</span></a></li></ol>
+    </nav>
+  </div>
+</aside>
+
 <main class="main" role="main">
-  	<article class="content article article-archives article-type-list" itemscope="">
-	    <header class="article-header">
-	      <h1 itemprop="title">归档: 2019/9</h1>
-	      <p class="text-muted">共 1 篇文章</p>
-	    </header>
-	    <div class="article-body">
-	      
-  
-  
+  <div class="content">
+  <article id="post-远程调试插件-Remote-Development" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
-    
+    <div class="article-header">
       
+        
+  
+    <h1 class="article-title" itemprop="name">
+      远程调试插件 - Remote Development
+    </h1>
+  
+
       
-      <section class="panel panel-default b-no">
-        <div class="panel-heading" role="tab">
-          <h3 class="panel-title">
-            <a data-toggle="collapse" href="#collapse2019" aria-expanded="true">
-              <i class="icon icon-calendar-plus text-active"></i><i class="icon icon-calendar-minus text"></i>
-              2019
-            </a>
-            <!-- <a href="/archives/2019" class="archive-year">2019</a> -->
-          </h3>
-        </div>
-        <div id="collapse2019" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading2019">
-        <div class="panel-body">
-          <div class="collection">
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2020/05/19/远程调试插件-Remote-Development/" class="article-date">
+	  <time datetime="2020-05-19T02:15:51.000Z" itemprop="datePublished">2020-05-19</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/指南/">指南</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link" href="/tags/工具/">工具</a>
+  </span>
+
+
+        
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/05/19/远程调试插件-Remote-Development/#comments" class="article-comment-link">评论</a></span>
+        
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <h5 id="环境和前提"><a href="#环境和前提" class="headerlink" title="环境和前提"></a>环境和前提</h5><ul>
+<li>本地 macOS Mojave</li>
+<li>远程服务器 Ubuntu 14.04.6 LTS</li>
+<li>本地已安装 VSCode，与服务器已建立 SSH 连接</li>
+</ul>
+<h5 id="安装扩展-Remote-Development"><a href="#安装扩展-Remote-Development" class="headerlink" title="安装扩展 Remote Development"></a>安装扩展 Remote Development</h5><p>在 VSCode 的 Extensions 中搜索 Remote Development 并安装，详见<a href="https://code.visualstudio.com/docs/remote/remote-overview" target="_blank" rel="noopener">官方文档</a>。</p>
+<h5 id="配置-Remote-SSH"><a href="#配置-Remote-SSH" class="headerlink" title="配置 Remote-SSH"></a>配置 Remote-SSH</h5><p>快捷键 <code>command + shift + p</code> 调出 Command Palette，搜索并找到 Remote-SSH：Open Configuration File 选项，选择正确的配置文件并填写相应信息。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Read more about SSH config files: https://linux.die.net/man/5/ssh_config</span></span><br><span class="line">Host sibyl                   <span class="comment"># 服务器名称（只是用于区分——</span></span><br><span class="line">    HostName xxx.xxx.xxx.xxx <span class="comment"># 服务器IP地址或域名</span></span><br><span class="line">    User xxx                 <span class="comment"># 服务器用户名</span></span><br></pre></td></tr></table></figure>
+
+<p>完成后左侧菜单栏会新增 Remote Explorer 选项，点击将呈列 SSH Targets，即刚刚所填写的 Host 名称（可以有多个）。点击想要连接的远程服务器，按照要求输入密码后即可成功连接（左下角出现 <code>SSH：Host</code> 标识）。此时新建一个终端，弹出的是远程服务器的 shell；新建工作区，弹出的是远程服务器的文件夹。大多数操作和正常使用 VSCode 是一致的。</p>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="http://sibyl233.github.io/2020/05/19/远程调试插件-Remote-Development/" title="远程调试插件 - Remote Development" target="_blank" rel="external">http://sibyl233.github.io/2020/05/19/远程调试插件-Remote-Development/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="http://sibylk.site" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.png" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="http://sibylk.site" target="_blank"><span class="text-dark">Sibyl</span><small class="ml-1x"></small></a></h3>
+        <div></div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+      <div id="vcomments"></div>
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
     
     
-<a href="/2019/09/23/Semantic-Segmentation/" class="collection-item" target="_blank" itemprop="url">
-  <time datetime="2019-09-23T05:43:58.000Z" itemprop="datePublished">2019-09-23</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> 语义分割方法整理
-</a>
-
-
+    <li class="next">
+      <a href="/2020/04/22/实用tips/" title="实用日常 (Tips)"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+    <li class="toggle-toc">
+      <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button">
+        <span>[&nbsp;</span><span>文章目录</span>
+        <i class="text-collapsed icon icon-anchor"></i>
+        <i class="text-in icon icon-close"></i>
+        <span>]</span>
+      </a>
+    </li>
+    
+  </ul>
   
   
-    </div></div></div></section>
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,wechat,facebook" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
   
 
-	    </div>
-  	</article>
-  	 	
+
 </main>
 
   <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
@@ -354,11 +461,42 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
     window.INSIGHT_CONFIG = INSIGHT_CONFIG;
 })(window);
 </script>
-<script src="/js/insight.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<script src="/js/insight.js"></script>
 
 
 
 
+
+   
+
+
+
+
+   
+    
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine"></script>
+  <script type="text/javascript">
+  var GUEST = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link';
+  meta = meta.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#vcomments',
+    verify: false,
+    notify: false,
+    appId: '',
+    appKey: '',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: meta,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+  </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+     
 
 
 
