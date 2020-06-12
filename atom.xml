@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://sibyl233.github.io/"/>
-  <updated>2020-05-19T04:46:14.621Z</updated>
+  <updated>2020-06-10T13:38:42.272Z</updated>
   <id>http://sibyl233.github.io/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Linux 常用命令</title>
+    <link href="http://sibyl233.github.io/2020/06/10/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>http://sibyl233.github.io/2020/06/10/Linux常用命令/</id>
+    <published>2020-06-10T07:24:07.000Z</published>
+    <updated>2020-06-10T13:38:42.272Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h5 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h5><ul><li>cat /etc/issue</li><li>uname -a</li><li>nvidia-smi</li><li>nvcc -V</li><li>htop</li><li>du/df</li></ul><h5 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h5><ul><li>ls -a</li><li>mkdir</li><li>rm -rf</li><li>cp</li><li>mv</li><li>scp -r</li><li>find</li></ul><h5 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h5><ul><li>ctrl + super + left/right: 切换工作区</li><li>ctrl + tab: 切换窗口</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+      <category term="指南" scheme="http://sibyl233.github.io/categories/%E6%8C%87%E5%8D%97/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>远程调试插件 - Remote Development</title>
     <link href="http://sibyl233.github.io/2020/05/19/%E8%BF%9C%E7%A8%8B%E8%B0%83%E8%AF%95%E6%8F%92%E4%BB%B6-Remote-Development/"/>
     <id>http://sibyl233.github.io/2020/05/19/远程调试插件-Remote-Development/</id>
     <published>2020-05-19T02:15:51.000Z</published>
-    <updated>2020-05-19T04:46:14.621Z</updated>
+    <updated>2020-05-19T11:30:30.799Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h5 id="环境和前提"><a href="#环境和前提" class="headerlink" title="环境和前提"></a>环境和前提</h5><ul><li>本地 macOS Mojave</li><li>远程服务器 Ubuntu 14.04.6 LTS</li><li>本地已安装 VSCode，与服务器已建立 SSH 连接</li></ul><h5 id="安装扩展-Remote-Development"><a href="#安装扩展-Remote-Development" class="headerlink" title="安装扩展 Remote Development"></a>安装扩展 Remote Development</h5><p>在 VSCode 的 Extensions 中搜索 Remote Development 并安装，详见<a href="https://code.visualstudio.com/docs/remote/remote-overview" target="_blank" rel="noopener">官方文档</a>。</p><h5 id="配置-Remote-SSH"><a href="#配置-Remote-SSH" class="headerlink" title="配置 Remote-SSH"></a>配置 Remote-SSH</h5><p>快捷键 <code>command + shift + p</code> 调出 Command Palette，搜索并找到 Remote-SSH：Open Configuration File 选项，选择正确的配置文件并填写相应信息。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Read more about SSH config files: https://linux.die.net/man/5/ssh_config</span></span><br><span class="line">Host sibyl                   <span class="comment"># 服务器名称（只是用于区分——</span></span><br><span class="line">    HostName xxx.xxx.xxx.xxx <span class="comment"># 服务器IP地址或域名</span></span><br><span class="line">    User xxx                 <span class="comment"># 服务器用户名</span></span><br></pre></td></tr></table></figure><p>完成后左侧菜单栏会新增 Remote Explorer 选项，点击将呈列 SSH Targets，即刚刚所填写的 Host 名称（可以有多个）。点击想要连接的远程服务器，按照要求输入密码后即可成功连接（左下角出现 <code>SSH：Host</code> 标识）。此时新建一个终端，弹出的是远程服务器的 shell；新建工作区，弹出的是远程服务器的文件夹。大多数操作和正常使用 VSCode 是一致的。</p>]]></content>
     
