@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://sibyl233.github.io/"/>
-  <updated>2020-06-10T13:38:42.272Z</updated>
+  <updated>2020-05-19T11:30:30.799Z</updated>
   <id>http://sibyl233.github.io/</id>
   
   <author>
@@ -15,29 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>Linux 常用命令</title>
-    <link href="http://sibyl233.github.io/2020/06/10/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
-    <id>http://sibyl233.github.io/2020/06/10/Linux常用命令/</id>
-    <published>2020-06-10T07:24:07.000Z</published>
-    <updated>2020-06-10T13:38:42.272Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h5 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h5><ul><li>cat /etc/issue</li><li>uname -a</li><li>nvidia-smi</li><li>nvcc -V</li><li>htop</li><li>du/df</li></ul><h5 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h5><ul><li>ls -a</li><li>mkdir</li><li>rm -rf</li><li>cp</li><li>mv</li><li>scp -r</li><li>find</li></ul><h5 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h5><ul><li>ctrl + super + left/right: 切换工作区</li><li>ctrl + tab: 切换窗口</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla
-      
-    
-    </summary>
-    
-      <category term="指南" scheme="http://sibyl233.github.io/categories/%E6%8C%87%E5%8D%97/"/>
-    
-    
-  </entry>
   
   <entry>
     <title>远程调试插件 - Remote Development</title>
@@ -61,29 +38,6 @@
     
     
       <category term="工具" scheme="http://sibyl233.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>实用日常 (Tips)</title>
-    <link href="http://sibyl233.github.io/2020/04/22/%E5%AE%9E%E7%94%A8tips/"/>
-    <id>http://sibyl233.github.io/2020/04/22/实用tips/</id>
-    <published>2020-04-22T02:51:45.000Z</published>
-    <updated>2020-04-22T03:32:43.365Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h5 id="快速下载-ArXiv-文献"><a href="#快速下载-ArXiv-文献" class="headerlink" title="快速下载 ArXiv 文献"></a>快速下载 ArXiv 文献</h5><p>通过使用在中国区的镜像站点来加速。例：原本为 <code>https://arxiv.org/pdf/xxxx.pdf</code> 手动改为 <code>http://cn.arxiv.org/pdf/xxxx.pdf</code> </p><h5 id="下载网页内嵌-PDF-文档"><a href="#下载网页内嵌-PDF-文档" class="headerlink" title="下载网页内嵌 PDF 文档"></a>下载网页内嵌 PDF 文档</h5><p>快捷键 F12 &gt;&gt; Network &gt;&gt; XHR &gt;&gt; 找到 PDF 真实网址</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla
-      
-    
-    </summary>
-    
-      <category term="指南" scheme="http://sibyl233.github.io/categories/%E6%8C%87%E5%8D%97/"/>
-    
     
   </entry>
   
