@@ -1,24 +1,12 @@
 <!DOCTYPE html>
 <html lang=zh>
 <head><meta name="generator" content="Hexo 3.9.0">
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-  
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
-  <meta name="renderer" content="webkit">
-  <meta http-equiv="Cache-Control" content="no-transform">
-  <meta http-equiv="Cache-Control" content="no-siteapp">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="format-detection" content="telephone=no,email=no,adress=no">
-  <!-- Color theme for statusbar -->
-  <meta name="theme-color" content="#000000">
-  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
-  <meta http-equiv="window-target" content="_top">
-  
-  
-  <title>语义分割方法整理 | Memo</title>
-  <meta name="description" content="Basis FCN [FCN] Fully Convolutional Networks for Semantic Segmentation   DeepLab [DeepLab v1] Semantic Image Segmentation with Deep Convolutional Nets and Fully Connected CRFs  [DeepLab v2] DeepLab: S">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    <meta name="description" content="Basis FCN [FCN] Fully Convolutional Networks for Semantic Segmentation   DeepLab [DeepLab v1] Semantic Image Segmentation with Deep Convolutional Nets and Fully Connected CRFs  [DeepLab v2] DeepLab: S">
 <meta property="og:type" content="article">
 <meta property="og:title" content="语义分割方法整理">
 <meta property="og:url" content="http://sibyl233.github.io/2019/09/23/Semantic-Segmentation/index.html">
@@ -29,303 +17,137 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="语义分割方法整理">
 <meta name="twitter:description" content="Basis FCN [FCN] Fully Convolutional Networks for Semantic Segmentation   DeepLab [DeepLab v1] Semantic Image Segmentation with Deep Convolutional Nets and Fully Connected CRFs  [DeepLab v2] DeepLab: S">
-  <!-- Canonical links -->
-  <link rel="canonical" href="http://sibyl233.github.io/2019/09/23/Semantic-Segmentation/index.html">
-  
-    <link rel="alternate" href="/atom.xml" title="备忘录" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon-32x32-k.png" type="image/x-icon">
-  
-  <link rel="stylesheet" href="/css/style.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-  
-  
-  
-  
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>语义分割方法整理</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+	
 </head>
 
-
-<body class="main-center" itemscope itemtype="http://schema.org/WebPage">
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="header" itemscope itemtype="http://schema.org/WPHeader">
-  <div class="slimContent">
-    <div class="navbar-header">
-      
-      
-      <div class="profile-block text-center">
-        <a id="avatar" href="http://sibylk.site" target="_blank">
-          <img class="img-circle img-rotate" src="/images/avatar.png" width="200" height="200">
-        </a>
-        <h2 id="name" class="hidden-xs hidden-sm">Sibyl</h2>
-        <h3 id="title" class="hidden-xs hidden-sm hidden-md"></h3>
-        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> Hangzhou, China</small>
-      </div>
-      
-      <div class="search" id="search-form-wrap">
-
-    <form class="search-form sidebar-form">
-        <div class="input-group">
-            <input type="text" class="search-form-input form-control" placeholder="搜索" />
-            <span class="input-group-btn">
-                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
-            </span>
-        </div>
-    </form>
-    <div class="ins-search">
-  <div class="ins-search-mask"></div>
-  <div class="ins-search-container">
-    <div class="ins-input-wrapper">
-      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech />
-      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-    </div>
-    <div class="ins-section-wrapper">
-      <div class="ins-section-container"></div>
-    </div>
-  </div>
-</div>
-
-
-</div>
-      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
-    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
-      <ul class="nav navbar-nav main-nav ">
-        
-        
-        <li class="menu-item menu-item-home">
-          <a href="/.">
-            
-            <i class="icon icon-home-fill"></i>
-            
-            <span class="menu-title">首页</span>
-          </a>
-        </li>
-        
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives">
-            
-            <i class="icon icon-archives-fill"></i>
-            
-            <span class="menu-title">归档</span>
-          </a>
-        </li>
-        
-        
-        <li class="menu-item menu-item-links">
-          <a href="/links">
-            
-            <i class="icon icon-friendship"></i>
-            
-            <span class="menu-title">友链</span>
-          </a>
-        </li>
-        
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about">
-            
-            <i class="icon icon-cup-fill"></i>
-            
-            <span class="menu-title">关于</span>
-          </a>
-        </li>
-        
+<body class="max-width mx-auto px3 ltr">
+    
+      <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="http://github.com/probberechts">项目</a></li><!--
+     -->
       </ul>
-      
-    </nav>
-  </div>
-</header>
-
-  
-    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
-  <div class="slimContent">
-    
-      <div class="widget">
-    <h3 class="widget-title">公告</h3>
-    <div class="widget-body">
-        <div id="board">
-            <div class="content">
-                <p>Hi!</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-    
-      
-  <div class="widget">
-    <h3 class="widget-title">分类</h3>
-    <div class="widget-body">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/指南/">指南</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/">笔记</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/胡言/">胡言</a><span class="category-list-count">1</span></li></ul>
-    </div>
-  </div>
-
-
-    
-      
-  <div class="widget">
-    <h3 class="widget-title">标签</h3>
-    <div class="widget-body">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/工具/">工具</a><span class="tag-list-count">2</span></li></ul>
-    </div>
-  </div>
-
-
-    
-      
-  <div class="widget">
-    <h3 class="widget-title">归档</h3>
-    <div class="widget-body">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">五月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">一月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">九月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">七月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">五月 2018</a><span class="archive-list-count">1</span></li></ul>
-    </div>
-  </div>
-
-
-    
-      
-  <div class="widget">
-    <h3 class="widget-title">最新文章</h3>
-    <div class="widget-body">
-      <ul class="recent-post-list list-unstyled no-thumbnail">
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
         
-          <li>
-            
-            <div class="item-inner">
-              <p class="item-category">
-                <a class="category-link" href="/categories/指南/">指南</a>
-              </p>
-              <p class="item-title">
-                <a href="/2020/05/19/远程调试插件-Remote-Development/" class="title">远程调试插件 - Remote Development</a>
-              </p>
-              <p class="item-date">
-                <time datetime="2020-05-19T02:15:51.000Z" itemprop="datePublished">2020-05-19</time>
-              </p>
-            </div>
-          </li>
-          
-          <li>
-            
-            <div class="item-inner">
-              <p class="item-category">
-                <a class="category-link" href="/categories/指南/">指南</a>
-              </p>
-              <p class="item-title">
-                <a href="/2020/01/08/Zotero简明使用指南/" class="title">文献管理软件 - Zotero</a>
-              </p>
-              <p class="item-date">
-                <time datetime="2020-01-08T08:22:23.000Z" itemprop="datePublished">2020-01-08</time>
-              </p>
-            </div>
-          </li>
-          
-          <li>
-            
-            <div class="item-inner">
-              <p class="item-category">
-                <a class="category-link" href="/categories/笔记/">笔记</a>
-              </p>
-              <p class="item-title">
-                <a href="/2019/09/23/Semantic-Segmentation/" class="title">语义分割方法整理</a>
-              </p>
-              <p class="item-date">
-                <time datetime="2019-09-23T05:43:58.000Z" itemprop="datePublished">2019-09-23</time>
-              </p>
-            </div>
-          </li>
-          
-          <li>
-            
-            <div class="item-inner">
-              <p class="item-category">
-                <a class="category-link" href="/categories/笔记/">笔记</a>
-              </p>
-              <p class="item-title">
-                <a href="/2019/07/11/道路场景语义分割/" class="title">道路场景语义分割</a>
-              </p>
-              <p class="item-date">
-                <time datetime="2019-07-11T03:35:50.000Z" itemprop="datePublished">2019-07-11</time>
-              </p>
-            </div>
-          </li>
-          
-          <li>
-            
-            <div class="item-inner">
-              <p class="item-category">
-                <a class="category-link" href="/categories/胡言/">胡言</a>
-              </p>
-              <p class="item-title">
-                <a href="/2018/05/11/一个测试/" class="title">一个测试</a>
-              </p>
-              <p class="item-date">
-                <time datetime="2018-05-11T11:20:15.000Z" itemprop="datePublished">2018-05-11</time>
-              </p>
-            </div>
-          </li>
-          
+        <li><a class="icon" aria-label="上一篇" href="/2020/01/08/Zotero简明使用指南/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/2019/07/11/道路场景语义分割/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
       </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://sibyl233.github.io/2019/09/23/Semantic-Segmentation/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://sibyl233.github.io/2019/09/23/Semantic-Segmentation/&text=语义分割方法整理"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://sibyl233.github.io/2019/09/23/Semantic-Segmentation/&title=语义分割方法整理"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://sibyl233.github.io/2019/09/23/Semantic-Segmentation/&is_video=false&description=语义分割方法整理"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=语义分割方法整理&body=Check out this article: http://sibyl233.github.io/2019/09/23/Semantic-Segmentation/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://sibyl233.github.io/2019/09/23/Semantic-Segmentation/&title=语义分割方法整理"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://sibyl233.github.io/2019/09/23/Semantic-Segmentation/&title=语义分割方法整理"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://sibyl233.github.io/2019/09/23/Semantic-Segmentation/&title=语义分割方法整理"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://sibyl233.github.io/2019/09/23/Semantic-Segmentation/&title=语义分割方法整理"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://sibyl233.github.io/2019/09/23/Semantic-Segmentation/&name=语义分割方法整理&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=http://sibyl233.github.io/2019/09/23/Semantic-Segmentation/&t=语义分割方法整理"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
     </div>
-  </div>
-  
-
-    
-  </div>
-</aside>
-
-  
-  
-<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
-  <div class="slimContent">
-    <nav id="toc" class="article-toc">
-      <h3 class="toc-title">文章目录</h3>
+    <div id="toc">
       <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#Basis"><span class="toc-number">1.</span> <span class="toc-text">Basis</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Method"><span class="toc-number">2.</span> <span class="toc-text">Method</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#CRF"><span class="toc-number">2.1.</span> <span class="toc-text">CRF</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Atrous-Dilated-Convolution"><span class="toc-number">2.2.</span> <span class="toc-text">Atrous/Dilated Convolution</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Context-Aggregation"><span class="toc-number">2.3.</span> <span class="toc-text">Context Aggregation</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Attention-Mechanism"><span class="toc-number">2.4.</span> <span class="toc-text">Attention Mechanism</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Graph-Convolution"><span class="toc-number">2.5.</span> <span class="toc-text">Graph Convolution</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Real-time-Method"><span class="toc-number">3.</span> <span class="toc-text">Real-time Method</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Convolution-Factorization"><span class="toc-number">3.1.</span> <span class="toc-text">Convolution Factorization</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Multi-branch"><span class="toc-number">3.2.</span> <span class="toc-text">Multi-branch</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Reference"><span class="toc-number">4.</span> <span class="toc-text">Reference</span></a></li></ol>
-    </nav>
-  </div>
-</aside>
-
-<main class="main" role="main">
-  <div class="content">
-  <article id="post-Semantic-Segmentation" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
-    
-    <div class="article-header">
-      
-        
-  
-    <h1 class="article-title" itemprop="name">
-      语义分割方法整理
-    </h1>
-  
-
-      
-      <div class="article-meta">
-        <span class="article-date">
-    <i class="icon icon-calendar-check"></i>
-	<a href="/2019/09/23/Semantic-Segmentation/" class="article-date">
-	  <time datetime="2019-09-23T05:43:58.000Z" itemprop="datePublished">2019-09-23</time>
-	</a>
-</span>
-        
-  <span class="article-category">
-    <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/categories/笔记/">笔记</a>
-  </span>
-
-        
-
-        
-
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/09/23/Semantic-Segmentation/#comments" class="article-comment-link">评论</a></span>
-        
-      </div>
     </div>
-    <div class="article-entry marked-body" itemprop="articleBody">
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        语义分割方法整理
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Sibyl K</span>
+      </span>
       
-        <h4 id="Basis"><a href="#Basis" class="headerlink" title="Basis"></a>Basis</h4><ul>
+    <div class="postdate">
+      
+        <time datetime="2019-09-23T05:43:58.000Z" itemprop="datePublished">2019-09-23</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/笔记/">笔记</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h4 id="Basis"><a href="#Basis" class="headerlink" title="Basis"></a>Basis</h4><ul>
 <li>FCN<ul>
 <li>[FCN] Fully Convolutional Networks for Semantic Segmentation</li>
 </ul>
@@ -409,171 +231,157 @@
 <li>Survey on semantic segmentation using deep learning techniques [<a href="https://www.sciencedirect.com/science/article/pii/S092523121930181X" target="_blank" rel="noopener">paper</a>]</li>
 </ul>
 
-      
-    </div>
-    <div class="article-footer">
-      <blockquote class="mt-2x">
-  <ul class="post-copyright list-unstyled">
-    
-    <li class="post-copyright-link hidden-xs">
-      <strong>本文链接：</strong>
-      <a href="http://sibyl233.github.io/2019/09/23/Semantic-Segmentation/" title="语义分割方法整理" target="_blank" rel="external">http://sibyl233.github.io/2019/09/23/Semantic-Segmentation/</a>
-    </li>
-    
-    <li class="post-copyright-license">
-      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
-    </li>
-  </ul>
-</blockquote>
-
-
-<div class="panel panel-default panel-badger">
-  <div class="panel-body">
-    <figure class="media">
-      <div class="media-left">
-        <a href="http://sibylk.site" target="_blank" class="img-burn thumb-sm visible-lg">
-          <img src="/images/avatar.png" class="img-rounded w-full" alt="">
-        </a>
-      </div>
-      <div class="media-body">
-        <h3 class="media-heading"><a href="http://sibylk.site" target="_blank"><span class="text-dark">Sibyl</span><small class="ml-1x"></small></a></h3>
-        <div></div>
-      </div>
-    </figure>
   </div>
-</div>
+</article>
 
 
-    </div>
-  </article>
-  
-    
-  <section id="comments">
-  	
-      <div id="vcomments"></div>
-    
-  </section>
 
-
-  
-</div>
-
-  <nav class="bar bar-footer clearfix" data-stick-bottom>
-  <div class="bar-inner">
-  
-  <ul class="pager pull-left">
-    
-    <li class="prev">
-      <a href="/2020/01/08/Zotero简明使用指南/" title="文献管理软件 - Zotero"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
-    </li>
-    
-    
-    <li class="next">
-      <a href="/2019/07/11/道路场景语义分割/" title="道路场景语义分割"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
-    </li>
-    
-    
-    <li class="toggle-toc">
-      <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button">
-        <span>[&nbsp;</span><span>文章目录</span>
-        <i class="text-collapsed icon icon-anchor"></i>
-        <i class="text-in icon icon-close"></i>
-        <span>]</span>
-      </a>
-    </li>
-    
-  </ul>
-  
-  
-  
-  <div class="bar-right">
-    
-    <div class="share-component" data-sites="weibo,wechat,facebook" data-mobile-sites="weibo,qq,qzone"></div>
-    
-  </div>
-  </div>
-</nav>
-  
-
-
-</main>
-
-  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
-	
-    <div class="copyright">
-    	
-        &copy; 2021 Sibyl K
         
-        <div class="publishby">
-        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
-        </div>
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="http://github.com/probberechts">项目</a></li>
+        
+      </ul>
     </div>
-</footer>
-  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
-<script>
-window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
-</script>
-<script src="/js/plugin.min.js"></script>
-<script src="/js/application.js"></script>
 
-    <script>
-(function (window) {
-    var INSIGHT_CONFIG = {
-        TRANSLATION: {
-            POSTS: '文章',
-            PAGES: '页面',
-            CATEGORIES: '分类',
-            TAGS: '标签',
-            UNTITLED: '(未命名)',
-        },
-        ROOT_URL: '/',
-        CONTENT_URL: '/content.json',
-    };
-    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
-})(window);
-</script>
-<script src="/js/insight.js"></script>
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#Basis"><span class="toc-number">1.</span> <span class="toc-text">Basis</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Method"><span class="toc-number">2.</span> <span class="toc-text">Method</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#CRF"><span class="toc-number">2.1.</span> <span class="toc-text">CRF</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Atrous-Dilated-Convolution"><span class="toc-number">2.2.</span> <span class="toc-text">Atrous/Dilated Convolution</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Context-Aggregation"><span class="toc-number">2.3.</span> <span class="toc-text">Context Aggregation</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Attention-Mechanism"><span class="toc-number">2.4.</span> <span class="toc-text">Attention Mechanism</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Graph-Convolution"><span class="toc-number">2.5.</span> <span class="toc-text">Graph Convolution</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Real-time-Method"><span class="toc-number">3.</span> <span class="toc-text">Real-time Method</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Convolution-Factorization"><span class="toc-number">3.1.</span> <span class="toc-text">Convolution Factorization</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Multi-branch"><span class="toc-number">3.2.</span> <span class="toc-text">Multi-branch</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Reference"><span class="toc-number">4.</span> <span class="toc-text">Reference</span></a></li></ol>
+    </div>
 
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://sibyl233.github.io/2019/09/23/Semantic-Segmentation/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://sibyl233.github.io/2019/09/23/Semantic-Segmentation/&text=语义分割方法整理"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://sibyl233.github.io/2019/09/23/Semantic-Segmentation/&title=语义分割方法整理"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://sibyl233.github.io/2019/09/23/Semantic-Segmentation/&is_video=false&description=语义分割方法整理"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=语义分割方法整理&body=Check out this article: http://sibyl233.github.io/2019/09/23/Semantic-Segmentation/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://sibyl233.github.io/2019/09/23/Semantic-Segmentation/&title=语义分割方法整理"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://sibyl233.github.io/2019/09/23/Semantic-Segmentation/&title=语义分割方法整理"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://sibyl233.github.io/2019/09/23/Semantic-Segmentation/&title=语义分割方法整理"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://sibyl233.github.io/2019/09/23/Semantic-Segmentation/&title=语义分割方法整理"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://sibyl233.github.io/2019/09/23/Semantic-Segmentation/&name=语义分割方法整理&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=http://sibyl233.github.io/2019/09/23/Semantic-Segmentation/&t=语义分割方法整理"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
 
+    </div>
 
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
 
+  </div>
+</div>
 
-   
-
-
-
-
-   
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
     
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/valine"></script>
+    
+    2016-2022
+    Sibyl K
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="http://github.com/probberechts">项目</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
   <script type="text/javascript">
-  var GUEST = ['nick', 'mail', 'link'];
-  var meta = 'nick,mail,link';
-  meta = meta.split(',').filter(function(item) {
-    return GUEST.indexOf(item) > -1;
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments --><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
   });
-  new Valine({
-    el: '#vcomments',
-    verify: false,
-    notify: false,
-    appId: '',
-    appKey: '',
-    placeholder: 'Just go go',
-    avatar: 'mm',
-    meta: meta,
-    pageSize: '10' || 10,
-    visitor: false
-  });
-  </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</script>
 
-     
-
-
-
-
-
-
+<script type="text/javascript" src="">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
 
 </body>
 </html>
